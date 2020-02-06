@@ -1,0 +1,120 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>100</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.27">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>URL</name>
+          <description>Webpage url to test</description>
+          <defaultValue>https://en.wikipedia.org/wiki/Barack_Obama</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>browser</name>
+          <description>Choose which Browser to use when you test.</description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>chrome</string>
+              <string>firefox</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>run_number</name>
+          <description>How many times you want to test each page</description>
+          <defaultValue>3</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>additional_args</name>
+          <description>Add any valid sitespeed.io arguments. https://www.sitespeed.io/documentation/sitespeed.io/configuration/</description>
+          <defaultValue>--webpagetest.host localhost:4000 --webpagetest.location Local_Docker --webpagetest.runs 3 --webpagetest.includeRepeatView true</defaultValue>
+          <trim>true</trim>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>graphite_network=$(docker inspect --format=&apos;{{.HostConfig.NetworkMode}}&apos; graphite)
+
+# run_sitespeed=&quot;docker run --name sitespeed --volumes-from=jenkins --network=host --privileged=true --shm-size=1g --rm -v \&quot;/tmp/sitespeed.io/\&quot;:/sitespeed.io \sitespeedio/sitespeed.io \
+# --graphite.host localhost --graphite.port 2003 --graphite.httpPort 8080 --browsertime.browser $browser \--browsertime.iterations $run_number \
+# $additional_args $URL&quot;
+
+run_sitespeed=&quot;docker run \
+		--name sitespeed \
+		--volumes-from=jenkins \
+		--network=host \
+		--cap-add=NET_ADMIN \
+		--privileged \
+		--shm-size=2g \
+		--rm \
+		-v \
+		\&quot;$(echo $SITESPEED_REPORT_PATH)\&quot;:/sitespeed.io/sitespeed-result sitespeedio/sitespeed.io:12.0.0-plus1 \
+		-e REPLAY=true \
+		-e LATENCY=100 \
+		-n $run_number \
+		-c 3gfast \
+		-b $browser \
+		--browsertime.viewPort 1920x1080 \
+		--speedIndex \
+		--visualElements \
+		--chrome.timeline true \
+		--video \
+		--graphite.host localhost \
+		--graphite.port 2003 \
+		--graphite.httpPort 8080 \
+		$additional_args \
+		$URL&quot;
+
+eval $run_sitespeed
+
+report_dir_name=$(echo $URL | awk -F/ &apos;{print $3}&apos;)
+sudo rm -rf &quot;$WORKSPACE/frontend_report&quot; &amp;&amp; sudo mkdir &quot;$WORKSPACE/frontend_report&quot;
+
+cd &quot;/var/lib/sitespeed.io/sitespeed-result/$report_dir_name/&quot;
+cp -r $(ls -Art | tail -n 1)/* &quot;$WORKSPACE/frontend_report&quot;
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <htmlpublisher.HtmlPublisher plugin="htmlpublisher@1.14">
+      <reportTargets>
+        <htmlpublisher.HtmlPublisherTarget>
+          <reportName>Frontend report</reportName>
+          <reportDir>frontend_report/</reportDir>
+          <reportFiles>index.html</reportFiles>
+          <alwaysLinkToLastBuild>true</alwaysLinkToLastBuild>
+          <reportTitles></reportTitles>
+          <keepAll>true</keepAll>
+          <allowMissing>false</allowMissing>
+          <includes>**/*</includes>
+        </htmlpublisher.HtmlPublisherTarget>
+      </reportTargets>
+    </htmlpublisher.HtmlPublisher>
+  </publishers>
+  <buildWrappers/>
+</project>

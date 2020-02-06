@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  wpt_server:
+    volumes:
+    - ./wpt-server/settings/locations-macos.ini:/var/www/html/settings/locations.ini
+  wpt_agent:
+    environment:
+      LOCATION: Local_Docker
+      SHAPER: none

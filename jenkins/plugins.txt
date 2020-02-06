@@ -1,0 +1,17 @@
+greenballs
+configuration-as-code
+htmlpublisher
+show-build-parameters
+filesystem-list-parameter-plugin
+git
+rebuild
+persistent-parameter
+postbuild-task
+parameterized-trigger
+parameter-separator
+log-parser
+compress-buildlog
+groovy-postbuild
+antisamy-markup-formatter
+ssh-slaves
+blueocean

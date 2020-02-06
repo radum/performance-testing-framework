@@ -1,0 +1,164 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <org.jenkinsci.plugins.compressbuildlog.BuildLogCompressor plugin="compress-buildlog@1.2"/>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>200</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.28">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>USERS</name>
+          <description>Set total number of users</description>
+          <defaultValue>10</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>RAMPUP</name>
+          <description>Set ramp up duration(sec)</description>
+          <defaultValue>180</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>DURATION</name>
+          <description>Set test duration(sec)</description>
+          <defaultValue>600</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <alex.jenkins.plugins.FileSystemListParameterDefinition plugin="filesystem-list-parameter-plugin@0.0.4">
+          <name>SCENARIO</name>
+          <description>Select scenario to run</description>
+          <path>/var/lib/jmeter-scenarios/</path>
+          <selectedType>FILE</selectedType>
+          <sortByLastModified>false</sortByLastModified>
+          <sortReverseOrder>false</sortReverseOrder>
+          <selectedEnumType>FILE</selectedEnumType>
+          <regexIncludePattern>.+\.jmx</regexIncludePattern>
+          <regexExcludePattern></regexExcludePattern>
+        </alex.jenkins.plugins.FileSystemListParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>check_telegraf=$(docker container ls -a| grep telegraf | awk &apos;{ print $8 }&apos;)
+if [ &quot;$check_telegraf&quot; != &quot;Up&quot; ];
+then
+	echo &quot;Starting Telegraf container&quot;
+	docker container start telegraf
+else 
+	echo &quot;Telegraf container is already running&quot;
+fi
+if docker container ls -a| grep jmeter;
+then
+	docker container stop jmeter
+	docker container rm jmeter
+fi</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>pwd
+ls
+sudo rm -f report.log &amp;&amp; sudo rm -rf report/
+sudo cp -r /var/lib/jmeter-scenarios/* $WORKSPACE
+docker run --name jmeter --net=host --rm --volumes-from=jenkins -e SCENARIO=$WORKSPACE/$SCENARIO -e WORKSPACE=$WORKSPACE -e USERS=$USERS -e RAMPUP=$RAMPUP -e DURATION=$DURATION -e BUILD_NUMBER=$BUILD_NUMBER -e BUILD_URL=$BUILD_URL java:8-jdk 
+</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>docker container stop telegraf</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.plugins.logparser.LogParserPublisher plugin="log-parser@2.0">
+      <unstableOnWarning>false</unstableOnWarning>
+      <failBuildOnError>false</failBuildOnError>
+      <showGraphs>false</showGraphs>
+      <parsingRulesPath>/error_parsing</parsingRulesPath>
+      <useProjectRule>false</useProjectRule>
+    </hudson.plugins.logparser.LogParserPublisher>
+    <hudson.plugins.postbuildtask.PostbuildTask plugin="postbuild-task@1.8">
+      <tasks>
+        <hudson.plugins.postbuildtask.TaskProperties>
+          <logTexts>
+            <hudson.plugins.postbuildtask.LogProperties>
+              <logText>Build was aborted</logText>
+              <operator>AND</operator>
+            </hudson.plugins.postbuildtask.LogProperties>
+          </logTexts>
+          <EscalateStatus>false</EscalateStatus>
+          <RunIfJobSuccessful>false</RunIfJobSuccessful>
+          <script>docker container stop jmeter</script>
+        </hudson.plugins.postbuildtask.TaskProperties>
+      </tasks>
+    </hudson.plugins.postbuildtask.PostbuildTask>
+    <htmlpublisher.HtmlPublisher plugin="htmlpublisher@1.16">
+      <reportTargets>
+        <htmlpublisher.HtmlPublisherTarget>
+          <reportName>Load Test Report</reportName>
+          <reportDir>report/</reportDir>
+          <reportFiles>index.html</reportFiles>
+          <alwaysLinkToLastBuild>true</alwaysLinkToLastBuild>
+          <reportTitles></reportTitles>
+          <keepAll>true</keepAll>
+          <allowMissing>false</allowMissing>
+          <includes>**/*</includes>
+        </htmlpublisher.HtmlPublisherTarget>
+      </reportTargets>
+    </htmlpublisher.HtmlPublisher>
+    <org.jvnet.hudson.plugins.groovypostbuild.GroovyPostbuildRecorder plugin="groovy-postbuild@2.4">
+      <script plugin="script-security@1.44">
+        <script>import hudson.model.*
+
+//get current build
+def build = Thread.currentThread().executable
+
+def grafana_url = System.getenv(&quot;JENKINS_GRAFANA_URL&quot;)
+
+if(!grafana_url){
+println &apos;JENKINS_GRAFANA_URL is not specified&apos;
+grafana_url = &quot;127.0.0.1:8857&quot;
+}
+
+// grafana url for aggregate dashboard - replace time stamp with %s
+def perfResult = &quot;http://%s/dashboard/db/load-test-monitoring?from=%s&amp;to=%s&quot;
+
+// get build start and end time
+def start = build.getStartTimeInMillis();
+def end = start + build.getExecutor().getElapsedTime();
+
+// replace time
+perfResult = String.format(perfResult, grafana_url, start, end);
+
+//build the string to be added as description.
+def link = &quot;&lt;a href=&apos;%s&apos;&gt;%s&lt;/a&gt;&lt;br/&gt;&quot;;
+def sb = new StringBuilder();
+sb.append(String.format(link, perfResult, &quot;Grafana Performance Result&quot;))
+
+// set build description
+build.setDescription(sb.toString());</script>
+        <sandbox>false</sandbox>
+      </script>
+      <behavior>1</behavior>
+      <runForMatrixParent>false</runForMatrixParent>
+    </org.jvnet.hudson.plugins.groovypostbuild.GroovyPostbuildRecorder>
+  </publishers>
+  <buildWrappers/>
+</project>

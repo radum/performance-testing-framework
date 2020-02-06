@@ -1,0 +1,132 @@
+version: '3'
+services:
+  wpt_server:
+    container_name: wpt_server
+    image: webpagetest/server:latest
+    volumes:
+      - ./wpt_data/dat:/var/www/html/dat
+      - ./wpt_data/results:/var/www/html/results
+      - ./wpt_data/logs:/var/www/html/logs
+      - ./wpt-server/settings/locations.ini:/var/www/html/settings/locations.ini
+      - ./wpt-server/settings/settings.ini:/var/www/html/settings/settings.ini
+    ports:
+      - 4000:80
+    restart: always
+  wpt_agent:
+    container_name: wpt_agent
+    image: webpagetest/agent:latest
+    shm_size: '2gb'
+    environment:
+      # TODO: Explore why I can't use http://wpt_server:4000/work/
+      SERVER_URL: http://localhost:4000/work/
+      LOCATION: Local_Docker
+      NAME: default-wpt-agent
+      EXTRA_ARGS: "--log /debug.log -vvvv"
+    depends_on:
+      - wpt_server
+    ports:
+      - "4001:80"
+    privileged: true
+    network_mode: "host"
+    extra_hosts:
+      - "local.dev:10.8.10.11"
+    env_file:
+      - wpt.env
+    restart: always
+  sitespeed.io:
+    container_name: sitespeed.io
+    image: sitespeedio/sitespeed.io:12.0.0-plus1
+    command: -V
+    shm_size: 2g
+    volumes:
+      - ./reports/sitespeed-result/:/sitespeed.io/sitespeed-result
+  grafana:
+    container_name: grafana
+    build: ./grafana
+    depends_on:
+      - graphite
+    links:
+      - graphite
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=hdeAga76VG6ga7plZ1
+      - GF_SECURITY_ADMIN_USER=sitespeedio
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_USERS_ALLOW_SIGN_UP=false
+      - GF_USERS_ALLOW_ORG_CREATE=false
+      - GF_INSTALL_PLUGINS=briangann-datatable-panel,raintank-worldping-app
+    volumes:
+      - grafana:/var/lib/grafana
+    restart: always
+  grafana-setup:
+    image: sitespeedio/grafana-bootstrap:11.3.0
+    links:
+      - grafana
+    environment:
+      - GF_PASSWORD=hdeAga76VG6ga7plZ1
+      - GF_USER=sitespeedio
+  graphite:
+    container_name: graphite
+    image: sitespeedio/graphite:1.1.5-12
+    ports:
+      - "2003:2003"
+      - "8080:80"
+    restart: always
+    volumes:
+      # In production you should configure/map these to your container
+      # Make sure whisper and graphite.db/grafana.db lives outside your containerr
+      # https://www.sitespeed.io/documentation/sitespeed.io/graphite/#graphite-for-production-important
+      - whisper:/opt/graphite/storage/whisper
+      # Download an empty graphite.db from https://github.com/sitespeedio/sitespeed.io/tree/master/docker/graphite
+      # - /absolute/path/to/graphite/graphite.db:/opt/graphite/storage/graphite.db
+      #
+      # And put the configuration files on your server, configure them as you need
+      # Download from https://github.com/sitespeedio/docker-graphite-statsd/tree/master/conf/graphite
+      # - /absolute/path/to/graphite/conf/storage-schemas.conf:/opt/graphite/conf/storage-schemas.conf
+      # - /absolute/path/to/graphite/conf/storage-aggregation.conf:/opt/graphite/conf/storage-aggregation.conf
+      # - /absolute/path/to/graphite/conf/carbon.conf:/opt/graphite/conf/carbon.conf
+  jenkins:
+    container_name: jenkins
+    # image: jenkins/jenkins:lts
+    build: ./jenkins
+    shm_size: '2gb'
+    ports:
+      - "8181:8080"
+      - "50000:50000"
+    environment:
+      # JENKINS_URL_CONFIG variable is used to set jenkins_url variable in jenkins global configuration.
+      # This url will be used to create links to jenkins builds in grafana dashboards, default is http://127.0.0.1:8181/
+      # Slash '/' should be escaped with '\'
+      # - JENKINS_URL_CONFIG=http:\/\/127.0.0.1:8181\/
+      # JENKINS_GRAFANA_URL is used for generating link to grafana report in jenkins job description
+      # default value is 127.0.0.1:8857
+      # - JENKINS_GRAFANA_URL=127.0.0.1:8857
+      - JENKINS_ADMIN_LOGIN=admin
+      - JENKINS_ADMIN_PASSWORD=admin
+      - SITESPEED_REPORT_PATH=$PWD/reports/sitespeed-result/
+    volumes:
+      - ./reports/sitespeed-result/:/var/lib/sitespeed.io/sitespeed-result/
+      - /var/run/docker.sock:/var/run/docker.sock
+      - jenkins-home:/var/jenkins_home
+      - ./wpt-server/scripts/:/var/lib/wpt-scripts/
+    restart: unless-stopped
+  # portainer:
+  #   container_name: portainer
+  #   image: portainer/portainer
+  #   ports:
+  #     - "9000:9000"
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #   restart: always
+volumes:
+    whisper:
+    # webpagetest-results:
+    # webpagetest-settings:
+    # webpagetest-logs:
+    # sitespeed:
+    # grafana-home:
+    # grafana-conf:
+    # influxdb:
+    grafana:
+    jenkins-home:

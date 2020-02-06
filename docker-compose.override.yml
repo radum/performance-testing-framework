@@ -1,0 +1,7 @@
+version: "3"
+
+# For Linux option
+services:
+  wpt_agent:
+    cap_add:
+      - NET_ADMIN

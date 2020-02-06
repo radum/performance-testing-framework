@@ -1,0 +1,8 @@
+.DS_Store
+
+reports/*
+!reports/**/.gitkeep
+wpt_data/dat/*
+wpt_data/logs/*
+wpt_data/results/*
+!wpt_data/**/.gitkeep
