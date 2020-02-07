@@ -135,3 +135,9 @@ docker-compose build --pull --force-rm --no-cache
 - [ ] More docs around architecture and how it works
 - [ ] Explain how to test localhost using extra_hosts for wpt-agent
 - [ ] jenkins-cli.jar should already be part of `/var/jenkins_home/war/WEB-INF/jenkins-cli.jar` but when I build it, it was not so I had to manually copy it.
+
+## Other examples
+
+- Anton Serputko perf testing framework (from which this one was inspired) - https://github.com/serputko/performance-testing-framework
+- Garie - https://garie.netlify.com/
+- OpenSpeedMonitor - https://github.com/iteratec/OpenSpeedMonitor
