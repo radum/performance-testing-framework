@@ -22,7 +22,7 @@ Not yet implemented:
 
 ## Framework architecture:
 
-![](https://github.com/radum/performance-testing-framework/blob/master/docs/img/framework-architecture.png)
+![](docs/img/framework-architecture.png)
 
 ## Prerequisites
 
@@ -80,6 +80,47 @@ All containers should be up and running
 docker-compose down
 ```
 
+## Jenkins
+
+Login to Jenkins with admin/admin (could be changed in docker-compose file)
+
+![](docs/img/jenkins-dashboard.png)
+*(BlueOcean plugin is also available)*
+
+By default jenkins consists of 2 jobs:
+
+- **FrontendJob**: run tests with sitespeed.io and webpagetest private instance
+- **BackendJob**: run Jmeter scenarios (NOT YET IMPLEMENTED)
+
+## Grafana
+
+### Available metrics
+
+Ready-made dashboards are inserted with a Docker container using curl. You can check out the container with the dashboards here: https://github.com/sitespeedio/grafana-bootstrap-docker
+
+The [Sitespeed.io](https://www.sitespeed.io/documentation/sitespeed.io/performance-dashboard/) team worked hard to make them and the great thing is that you can use them as base dashboards, then create additional dashboards if you like.
+
+![](docs/img/grafana-dashboard-example.mp4)
+![](docs/img/grafana-dashboard-example.png)
+
+## FrontendJob
+
+To run frontend test: **Open FrontendJob -> Build with Parameters -> Set build parameters -> Build**
+
+![](docs/img/jenkins_frontendjob_run.png)
+
+This job will start `sitespeed.io plus1` docker container and run test with parameters using the WebPageTest private instance.
+
+Frontend test deliverables:
+
+- **sitespeed.io HTML report**
+
+![](docs/img/jenkins_frontendjob_sitespeed_html_report.png)
+
+- **webpagetest HTML report**
+
+![](docs/img/jenkins_frontendjob_webpagetest_html_report.png)
+
 ## Useful Docker commands
 
 ```
@@ -88,6 +129,7 @@ docker-compose build --pull --force-rm --no-cache
 
 ## TODO
 
+- [ ] Test runs comparison
 - [ ] Add JMeter or Gantling load testing
 - [ ] Better docs to explain how it should be run
 - [ ] More docs around architecture and how it works
