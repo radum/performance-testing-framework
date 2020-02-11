@@ -58,14 +58,8 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>graphite_network=$(docker inspect --format=&apos;{{.HostConfig.NetworkMode}}&apos; graphite)
-
-# run_sitespeed=&quot;docker run --name sitespeed --volumes-from=jenkins --network=host --privileged=true --shm-size=1g --rm -v \&quot;/tmp/sitespeed.io/\&quot;:/sitespeed.io \sitespeedio/sitespeed.io \
-# --graphite.host localhost --graphite.port 2003 --graphite.httpPort 8080 --browsertime.browser $browser \--browsertime.iterations $run_number \
-# $additional_args $URL&quot;
-
-# TODO: Should run the built container from docker-compose not a new sitespeed.io one.
-run_sitespeed=&quot;docker run \
+      <command># TODO: Should run the built container from docker-compose not a new sitespeed.io one.
+run_sitespeed=&quot;sudo docker run \
 		--name sitespeed \
 		--volumes-from=jenkins \
 		--network=host \

@@ -87,13 +87,13 @@ runlhci="sudo docker run \
 		--cap-add=NET_ADMIN \
 		--privileged \
 		--shm-size=2g \
-        --env LHCI_BUILD_CONTEXT__ANCESTOR_HASH=$previous_build_number \
-		--env LHCI_BUILD_CONTEXT__CURRENT_HASH=$current_build_number \
-		--env LHCI_BUILD_CONTEXT__COMMIT_MESSAGE=$GIT_COMMIT_MESSAGE \
-		--env LHCI_BUILD_CONTEXT__AUTHOR=$GIT_AUTHOR \
-		--env LHCI_BUILD_CONTEXT__AVATAR_URL=$GIT_AVATAR_URL \
-		--env LHCI_BUILD_CONTEXT__COMMIT_TIME=$(date -u) \
-		--env LHCI_BUILD_CONTEXT__CURRENT_BRANCH=$GIT_CURRENT_BRANCH \
+		--env LHCI_BUILD_CONTEXT__ANCESTOR_HASH='$previous_build_number' \
+		--env LHCI_BUILD_CONTEXT__CURRENT_HASH='$current_build_number' \
+		--env LHCI_BUILD_CONTEXT__COMMIT_MESSAGE='$GIT_COMMIT_MESSAGE' \
+		--env LHCI_BUILD_CONTEXT__AUTHOR='$GIT_AUTHOR' \
+		--env LHCI_BUILD_CONTEXT__AVATAR_URL='$GIT_AVATAR_URL' \
+		--env LHCI_BUILD_CONTEXT__COMMIT_TIME='$(date -u)' \
+		--env LHCI_BUILD_CONTEXT__CURRENT_BRANCH='$GIT_CURRENT_BRANCH' \
 		--rm \
 		-v \
 		$(echo $LHCI_REPORT_PATH):/home/lhci/reports/.lighthouseci performance-testing-framework_lhci-client \
