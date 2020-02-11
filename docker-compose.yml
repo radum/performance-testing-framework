@@ -124,8 +124,8 @@ services:
       - JENKINS_ADMIN_PASSWORD=admin
       - SITESPEED_REPORT_PATH=$PWD/reports/sitespeed-result/
       - LHCI_REPORT_PATH=$PWD/reports/lhci-client/
-		volumes:
-			# TODO: Not sure this is needed, I could do it from FrontendJob.xml directly using the Jenkins assests.
+    volumes:
+      # TODO: Not sure this is needed, I could do it from FrontendJob.xml directly using the Jenkins assests.
       - ./reports/sitespeed-result/:/var/lib/sitespeed.io/sitespeed-result/
       - /var/run/docker.sock:/var/run/docker.sock
       - jenkins-home:/var/jenkins_home
