@@ -29,9 +29,17 @@ RUN apt-get update && \
    apt-get -y install docker-ce && \
    usermod -aG docker jenkins
 
-# Not sure this is needed
-# RUN curl -L https://github.com/docker/compose/releases/download/1.25.4/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-# RUN chmod +x /usr/local/bin/docker-compose
+# Install docker-compose.
+# We’ll check the [current release](https://github.com/docker/compose/releases) and if necessary, update it in the command below:
+RUN curl -L https://github.com/docker/compose/releases/download/1.25.4/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+RUN chmod +x /usr/local/bin/docker-compose
+
+# # Install latest chrome stable package to be used with LHCI.
+# # https://github.com/GoogleChrome/lighthouse-ci/blob/master/docs/recipes/docker-client/Dockerfile
+# RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+# RUN sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+# RUN apt-get update
+# RUN apt-get install -y google-chrome-stable --no-install-recommends
 
 RUN xargs /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt && \
 apt-get -y install sudo && \
@@ -41,6 +49,6 @@ ENV PATH "$PATH:/usr/local/bin/dind/"
 
 # drop back to the regular jenkins user - good practice
 # TODO: but if we do that then then docker can't run properly inside it fires some errors, I need to investigate.
-# USER jenkins
+USER jenkins
 
 ENTRYPOINT ["bash","-x","/run.sh"]

@@ -103,7 +103,7 @@ cp -r $(ls -Art | tail -n 1)/* &quot;$WORKSPACE/frontend_report&quot;
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <htmlpublisher.HtmlPublisher plugin="htmlpublisher@1.14">
+    <htmlpublisher.HtmlPublisher plugin="htmlpublisher@1.21">
       <reportTargets>
         <htmlpublisher.HtmlPublisherTarget>
           <reportName>frontend_report</reportName>

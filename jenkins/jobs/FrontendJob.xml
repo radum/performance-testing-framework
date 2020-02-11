@@ -64,6 +64,7 @@
 # --graphite.host localhost --graphite.port 2003 --graphite.httpPort 8080 --browsertime.browser $browser \--browsertime.iterations $run_number \
 # $additional_args $URL&quot;
 
+# TODO: Should run the built container from docker-compose not a new sitespeed.io one.
 run_sitespeed=&quot;docker run \
 		--name sitespeed \
 		--volumes-from=jenkins \
@@ -95,13 +96,14 @@ eval $run_sitespeed
 report_dir_name=$(echo $URL | awk -F/ &apos;{print $3}&apos;)
 sudo rm -rf &quot;$WORKSPACE/frontend_report&quot; &amp;&amp; sudo mkdir &quot;$WORKSPACE/frontend_report&quot;
 
+# TODO: Not sure this is needed, I could do it from FrontendJob.xml directly using the Jenkins assests.
 cd &quot;/var/lib/sitespeed.io/sitespeed-result/$report_dir_name/&quot;
 cp -r $(ls -Art | tail -n 1)/* &quot;$WORKSPACE/frontend_report&quot;
 </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <htmlpublisher.HtmlPublisher plugin="htmlpublisher@1.14">
+    <htmlpublisher.HtmlPublisher plugin="htmlpublisher@1.21">
       <reportTargets>
         <htmlpublisher.HtmlPublisherTarget>
           <reportName>Frontend report</reportName>

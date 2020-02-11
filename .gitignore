@@ -6,3 +6,4 @@ wpt_data/dat/*
 wpt_data/logs/*
 wpt_data/results/*
 !wpt_data/**/.gitkeep
+temp

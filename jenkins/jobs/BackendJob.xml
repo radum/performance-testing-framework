@@ -65,7 +65,7 @@ if [ &quot;$check_telegraf&quot; != &quot;Up&quot; ];
 then
 	echo &quot;Starting Telegraf container&quot;
 	docker container start telegraf
-else 
+else
 	echo &quot;Telegraf container is already running&quot;
 fi
 if docker container ls -a| grep jmeter;
@@ -79,7 +79,7 @@ fi</command>
 ls
 sudo rm -f report.log &amp;&amp; sudo rm -rf report/
 sudo cp -r /var/lib/jmeter-scenarios/* $WORKSPACE
-docker run --name jmeter --net=host --rm --volumes-from=jenkins -e SCENARIO=$WORKSPACE/$SCENARIO -e WORKSPACE=$WORKSPACE -e USERS=$USERS -e RAMPUP=$RAMPUP -e DURATION=$DURATION -e BUILD_NUMBER=$BUILD_NUMBER -e BUILD_URL=$BUILD_URL java:8-jdk 
+docker run --name jmeter --net=host --rm --volumes-from=jenkins -e SCENARIO=$WORKSPACE/$SCENARIO -e WORKSPACE=$WORKSPACE -e USERS=$USERS -e RAMPUP=$RAMPUP -e DURATION=$DURATION -e BUILD_NUMBER=$BUILD_NUMBER -e BUILD_URL=$BUILD_URL java:8-jdk
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
@@ -109,7 +109,7 @@ docker run --name jmeter --net=host --rm --volumes-from=jenkins -e SCENARIO=$WOR
         </hudson.plugins.postbuildtask.TaskProperties>
       </tasks>
     </hudson.plugins.postbuildtask.PostbuildTask>
-    <htmlpublisher.HtmlPublisher plugin="htmlpublisher@1.16">
+    <htmlpublisher.HtmlPublisher plugin="htmlpublisher@1.21">
       <reportTargets>
         <htmlpublisher.HtmlPublisherTarget>
           <reportName>Load Test Report</reportName>

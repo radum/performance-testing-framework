@@ -11,7 +11,7 @@ services:
       - ./wpt-server/settings/settings.ini:/var/www/html/settings/settings.ini
     ports:
       - 4000:80
-    restart: always
+    restart: unless-stopped
   wpt_agent:
     container_name: wpt_agent
     image: webpagetest/agent:latest
@@ -32,7 +32,7 @@ services:
       - "local.dev:10.8.10.11"
     env_file:
       - wpt.env
-    restart: always
+    restart: unless-stopped
   sitespeed.io:
     container_name: sitespeed.io
     image: sitespeedio/sitespeed.io:12.0.1-plus1
@@ -40,6 +40,21 @@ services:
     shm_size: 2g
     volumes:
       - ./reports/sitespeed-result/:/sitespeed.io/sitespeed-result
+  lhci-server:
+    container_name: lhci-server
+    build: ./lhci-server
+    ports:
+      - "9001:9001"
+    volumes:
+      - ./reports/lhci-server/:/data
+    restart: unless-stopped
+  lhci-client:
+    container_name: lhci-client
+    build: ./lhci-client
+    command: -V
+    shm_size: 1g
+    volumes:
+      - ./reports/lhci-client/:/home/lhci/reports/.lighthouseci
   grafana:
     container_name: grafana
     build: ./grafana
@@ -58,7 +73,7 @@ services:
       - GF_INSTALL_PLUGINS=briangann-datatable-panel,raintank-worldping-app
     volumes:
       - grafana:/var/lib/grafana
-    restart: always
+    restart: unless-stopped
   grafana-setup:
     image: sitespeedio/grafana-bootstrap:11.3.0
     links:
@@ -72,7 +87,7 @@ services:
     ports:
       - "2003:2003"
       - "8080:80"
-    restart: always
+    restart: unless-stopped
     volumes:
       # In production you should configure/map these to your container
       # Make sure whisper and graphite.db/grafana.db lives outside your containerr
@@ -91,6 +106,9 @@ services:
     # image: jenkins/jenkins:lts
     build: ./jenkins
     shm_size: '2gb'
+    cap_add:
+      # Run the container with SYS_ADMIN privileges so Chrome can sandbox processes. This is needed by LHCI.
+      - SYS_ADMIN
     ports:
       - "8181:8080"
       - "50000:50000"
@@ -105,7 +123,9 @@ services:
       - JENKINS_ADMIN_LOGIN=admin
       - JENKINS_ADMIN_PASSWORD=admin
       - SITESPEED_REPORT_PATH=$PWD/reports/sitespeed-result/
-    volumes:
+      - LHCI_REPORT_PATH=$PWD/reports/lhci-client/
+		volumes:
+			# TODO: Not sure this is needed, I could do it from FrontendJob.xml directly using the Jenkins assests.
       - ./reports/sitespeed-result/:/var/lib/sitespeed.io/sitespeed-result/
       - /var/run/docker.sock:/var/run/docker.sock
       - jenkins-home:/var/jenkins_home
@@ -118,7 +138,7 @@ services:
   #     - "9000:9000"
   #   volumes:
   #     - /var/run/docker.sock:/var/run/docker.sock
-  #   restart: always
+  #   restart: unless-stopped
 volumes:
     whisper:
     # webpagetest-results:

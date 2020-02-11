@@ -70,9 +70,10 @@ All containers should be up and running
 ### Services endpoints
 
 - **jenkins** localhost:8181
+- **LHCI** localhost:9001
+- **webpagetest server** localhost:4000
 - **grafana** localhost:3000
 - **portainer** localhost:9000
-- **webpagetest server** localhost:4000
 
 ### How to stop
 
@@ -92,18 +93,7 @@ By default jenkins consists of 2 jobs:
 - **FrontendJob**: run tests with sitespeed.io and webpagetest private instance
 - **BackendJob**: run Jmeter scenarios (NOT YET IMPLEMENTED)
 
-## Grafana
-
-### Available metrics
-
-Ready-made dashboards are inserted with a Docker container using curl. You can check out the container with the dashboards here: https://github.com/sitespeedio/grafana-bootstrap-docker
-
-The [Sitespeed.io](https://www.sitespeed.io/documentation/sitespeed.io/performance-dashboard/) team worked hard to make them and the great thing is that you can use them as base dashboards, then create additional dashboards if you like.
-
-![](docs/img/grafana-dashboard-example.mp4)
-![](docs/img/grafana-dashboard-example.png)
-
-## FrontendJob
+## Frontend Job
 
 To run frontend test: **Open FrontendJob -> Build with Parameters -> Set build parameters -> Build**
 
@@ -121,14 +111,33 @@ Frontend test deliverables:
 
 ![](docs/img/jenkins_frontendjob_webpagetest_html_report.png)
 
+## LHCI Job
+
+To run Lighthouse CI test: **Open LighthouseCI -> Build with Parameters -> Set build parameters -> Build**
+
+This job will start `lhci-client` docker container and run test with parameters using Lighthouse, pushing the results to the LHCI server running on http://localhost:9001.
+
+## Grafana
+
+### Available metrics
+
+Ready-made dashboards are inserted with a Docker container using curl. You can check out the container with the dashboards here: https://github.com/sitespeedio/grafana-bootstrap-docker
+
+The [Sitespeed.io](https://www.sitespeed.io/documentation/sitespeed.io/performance-dashboard/) team worked hard to make them and the great thing is that you can use them as base dashboards, then create additional dashboards if you like.
+
+![](docs/img/grafana-dashboard-example.mp4)
+![](docs/img/grafana-dashboard-example.png)
+
 ## Useful Docker commands
 
 ```
 docker-compose build --pull --force-rm --no-cache
+docker-compose -f docker-compose.yml -f docker-compose-macos.yml up lhci-server
 ```
 
 ## TODO
 
+- [ ] Run containers from Jenkins via docker-compose or at leaset the built ones
 - [ ] Test runs comparison
 - [ ] Add JMeter or Gantling load testing
 - [ ] Better docs to explain how it should be run

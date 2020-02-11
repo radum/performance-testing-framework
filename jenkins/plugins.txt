@@ -4,6 +4,7 @@ htmlpublisher
 show-build-parameters
 filesystem-list-parameter-plugin
 git
+nodejs
 rebuild
 persistent-parameter
 postbuild-task
