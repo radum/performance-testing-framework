@@ -92,7 +92,7 @@ sudo rm -rf &quot;$WORKSPACE/frontend_report&quot; &amp;&amp; sudo mkdir &quot;$
 
 # TODO: Not sure this is needed, I could do it from FrontendJob.xml directly using the Jenkins assests.
 cd &quot;/var/lib/sitespeed.io/sitespeed-result/$report_dir_name/&quot;
-cp -r $(ls -Art | tail -n 1)/* &quot;$WORKSPACE/frontend_report&quot;
+sudo cp -r $(ls -Art | tail -n 1)/* &quot;$WORKSPACE/frontend_report&quot;
 </command>
     </hudson.tasks.Shell>
   </builders>

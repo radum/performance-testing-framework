@@ -101,11 +101,9 @@ runlhci="sudo docker run \
 
 eval $runlhci
 
-# TODO: Fix this
-# report_dir_name=$(echo $URL | awk -F/ &apos;{print $3}&apos;)
-# sudo rm -rf &quot;$WORKSPACE/lhci_report&quot; &amp;&amp; sudo mkdir &quot;$WORKSPACE/lhci_report&quot;
-# cd &quot;/var/lib/sitespeed.io/sitespeed-result/$report_dir_name/&quot;
-# cp -r $(ls -Art | tail -n 1)/* &quot;$WORKSPACE/lhci_report&quot;
+sudo rm -rf "$WORKSPACE/lhci_report" && sudo mkdir "$WORKSPACE/lhci_report"
+cd "/var/lib/lhci/lhci-result/"
+sudo cp -r $(ls -Art *.html | tail -n 1) "$WORKSPACE/lhci_report"
 </command>
     </hudson.tasks.Shell>
   </builders>

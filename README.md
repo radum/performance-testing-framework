@@ -117,6 +117,8 @@ To run Lighthouse CI test: **Open LighthouseCI -> Build with Parameters -> Set b
 
 This job will start `lhci-client` docker container and run test with parameters using Lighthouse, pushing the results to the LHCI server running on http://localhost:9001.
 
+![](docs/img/lhci-report.png)
+
 ## Grafana
 
 ### Available metrics

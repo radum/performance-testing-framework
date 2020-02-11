@@ -7,15 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [0.1.0] - 2020-02-11
+## [1.0.0] - 2020-02-11
 ### Added
 - LHCI Server and client containers
 - Jenkins node plugin
 - Jenkins LHCI server pipeline
 - Docker compose to Jenkins container
+- Fix Jenkins sudo requirements
 
 ### Changed
-- Some containers need to restart unless sttoped
+- Some containers need to restart unless stopped
 
 ### Removed
 - N\A
