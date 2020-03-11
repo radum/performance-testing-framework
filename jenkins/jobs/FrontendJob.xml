@@ -68,7 +68,7 @@ run_sitespeed=&quot;sudo docker run \
 		--shm-size=2g \
 		--rm \
 		-v \
-		\&quot;$(echo $SITESPEED_REPORT_PATH)\&quot;:/sitespeed.io/sitespeed-result sitespeedio/sitespeed.io:12.0.1-plus1 \
+		\&quot;$(echo $SITESPEED_REPORT_PATH)\&quot;:/sitespeed.io/sitespeed-result sitespeedio/sitespeed.io:12.1.0-plus1 \
 		-e REPLAY=true \
 		-e LATENCY=100 \
 		-n $run_number \
@@ -79,6 +79,7 @@ run_sitespeed=&quot;sudo docker run \
 		--visualElements \
 		--chrome.timeline true \
 		--video \
+		--sustainable.enable \
 		--graphite.host localhost \
 		--graphite.port 2003 \
 		--graphite.httpPort 8080 \

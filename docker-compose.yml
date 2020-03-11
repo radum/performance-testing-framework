@@ -35,7 +35,7 @@ services:
     restart: unless-stopped
   sitespeed.io:
     container_name: sitespeed.io
-    image: sitespeedio/sitespeed.io:12.0.1-plus1
+    image: sitespeedio/sitespeed.io:12.1.0-plus1
     command: -V
     shm_size: 2g
     volumes:
