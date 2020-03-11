@@ -1,4 +1,4 @@
-FROM node:10
+FROM node:12
 
 # Install utilities
 RUN apt-get update --fix-missing && apt-get -y upgrade
