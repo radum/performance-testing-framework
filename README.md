@@ -129,6 +129,8 @@ The results will be saved on the associated k6 reports folder and also pushed to
 
 ![](docs/img/grafana-dashboard-k6-example.png)
 
+*To add this dashboard follow the instructions [here](https://k6.io/docs/results-visualization/influxdb-+-grafana).*
+
 ## Grafana
 
 ### Available metrics
