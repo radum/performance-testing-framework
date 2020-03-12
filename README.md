@@ -10,15 +10,15 @@ Framework consists of next services:
 - **Jenkins**: continuous integration server for tests execution
 - **Sitespeed.io**: set of tools for frontend load testing
 - **Webpagetest**: private instance of webpagetest server for frontend tests execution
-- **Apache Jmeter**: tool for backend load testing
+- **K6**: tool for backend load testing
 - **Grafana**: data visualization & monitoring
 - **Graphite**: time series DB platform for metrics
+- **InfluxDB**: time series DB optimized for fast storage and retrieval of time series data
 
 Not yet implemented:
 
-- **Influxdb**: time series DB platform for metrics & events(Time Series Data)
-- **Telegraf**: server agent for collecting & reporting metrics
 - **Portainer**: service for managing docker environment
+- **K6 Grafana dashboard**:  The default Grafaba dashboard for K6 for now needs to be [added manually](https://k6.io/docs/results-visualization/influxdb-+-grafana)
 
 ## Framework architecture:
 
@@ -93,7 +93,7 @@ By default jenkins consists of 2 jobs:
 - **FrontendJob**: run tests with sitespeed.io and webpagetest private instance
 - **BackendJob**: run Jmeter scenarios (NOT YET IMPLEMENTED)
 
-## Frontend Job
+### Frontend Job
 
 To run frontend test: **Open FrontendJob -> Build with Parameters -> Set build parameters -> Build**
 
@@ -111,13 +111,23 @@ Frontend test deliverables:
 
 ![](docs/img/jenkins_frontendjob_webpagetest_html_report.png)
 
-## LHCI Job
+### LHCI Job
 
 To run Lighthouse CI test: **Open LighthouseCI -> Build with Parameters -> Set build parameters -> Build**
 
 This job will start `lhci-client` docker container and run test with parameters using Lighthouse, pushing the results to the LHCI server running on http://localhost:9001.
 
 ![](docs/img/lhci-report.png)
+
+### K6 Job
+
+K6 is a modern load testing tool, using Go and JavaScript. This job will start `k6` into a docker container and will use the provided script from `k6/scripts` folder.
+
+To run K6 Load testing create a [loading script](https://k6.io/docs/using-k6/http-requests) in the `k6/scripts` folder and then **Open K6 Load testing -> Build with Parameters -> Set build parameters -> Build**.
+
+The results will be saved on the associated k6 reports folder and also pushed to the InfluxDB running locally.
+
+![](docs/img/grafana-dashboard-k6-example.png)
 
 ## Grafana
 
@@ -139,9 +149,10 @@ docker-compose -f docker-compose.yml -f docker-compose-macos.yml up lhci-server
 
 ## TODO
 
+- [ ] Add K6 Grafaba dashboard - https://k6.io/docs/results-visualization/influxdb-+-grafana
 - [ ] Run containers from Jenkins via docker-compose or at leaset the built ones
 - [ ] Test runs comparison
-- [ ] Add JMeter or Gantling load testing
+- [x] Add JMeter or Gantling load testing (UPDATE: Went with K6 as it is very fast and uses less memory.)
 - [ ] Better docs to explain how it should be run
 - [ ] More docs around architecture and how it works
 - [ ] Explain how to test localhost using extra_hosts for wpt-agent

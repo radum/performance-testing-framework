@@ -55,6 +55,15 @@ services:
     shm_size: 1g
     volumes:
       - ./reports/lhci-client/:/home/lhci/reports/.lighthouseci
+  k6:
+    container_name: k6
+    image: loadimpact/k6:latest
+    ports:
+      - "6565:6565"
+    environment:
+      - K6_OUT=influxdb=http://influxdb:8086/k6
+    volumes:
+      - ./k6/scripts:/scripts
   grafana:
     container_name: grafana
     build: ./grafana
@@ -62,6 +71,7 @@ services:
       - graphite
     links:
       - graphite
+      - influxdb:influxdb
     ports:
       - "3000:3000"
     environment:
@@ -101,6 +111,14 @@ services:
       # - /absolute/path/to/graphite/conf/storage-schemas.conf:/opt/graphite/conf/storage-schemas.conf
       # - /absolute/path/to/graphite/conf/storage-aggregation.conf:/opt/graphite/conf/storage-aggregation.conf
       # - /absolute/path/to/graphite/conf/carbon.conf:/opt/graphite/conf/carbon.conf
+  influxdb:
+    container_name: influxdb
+    image: influxdb:latest
+    ports:
+      - "8086:8086"
+    environment:
+      - INFLUXDB_DB=k6
+    restart: unless-stopped
   jenkins:
     container_name: jenkins
     # image: jenkins/jenkins:lts
@@ -124,12 +142,15 @@ services:
       - JENKINS_ADMIN_PASSWORD=admin
       - SITESPEED_REPORT_PATH=$PWD/reports/sitespeed-result/
       - LHCI_REPORT_PATH=$PWD/reports/lhci-client/
+      - K6_REPORT_PATH=$PWD/reports/k6/
+      - K6_SCRIPTS_PATH=$PWD/k6/scripts/
     volumes:
+      - ./wpt-server/scripts/:/var/lib/wpt-scripts/
       - ./reports/sitespeed-result/:/var/lib/sitespeed.io/sitespeed-result/
       - ./reports/lhci-client/:/var/lib/lhci/lhci-result/
+      - ./reports/k6/:/var/lib/k6/k6-result/
       - /var/run/docker.sock:/var/run/docker.sock
       - jenkins-home:/var/jenkins_home
-      - ./wpt-server/scripts/:/var/lib/wpt-scripts/
     restart: unless-stopped
   # portainer:
   #   container_name: portainer
@@ -147,6 +168,6 @@ volumes:
     # sitespeed:
     # grafana-home:
     # grafana-conf:
-    # influxdb:
+    influxdb:
     grafana:
     jenkins-home:

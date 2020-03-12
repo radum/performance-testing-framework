@@ -1,0 +1,98 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>100</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.27">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>k6_vus</name>
+          <description>Number K6 virtual users.</description>
+          <defaultValue>10</defaultValue>
+          <trim>true</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>k6_duration</name>
+          <description>K6 test duration.</description>
+          <defaultValue>30s</defaultValue>
+          <trim>true</trim>
+        </hudson.model.StringParameterDefinition>
+		<hudson.model.StringParameterDefinition>
+          <name>k6_script</name>
+          <description>K6 script file name (sample.js).</description>
+          <defaultValue>sample.js</defaultValue>
+          <trim>true</trim>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command># TODO: Should run the built container from docker-compose not a new sitespeed.io one.
+
+K6_TEST_NAME="result-$BUILD_NUMBER-$k6_script.json"
+
+run_k6=&quot;sudo docker run \
+		--name k6-runner \
+		--volumes-from=jenkins \
+		--network=host \
+		--privileged \
+		--shm-size=2g \
+		--rm \
+		-v \
+		\&quot;$(echo $K6_SCRIPTS_PATH)\&quot;:/scripts \
+		-v \
+		\&quot;$(echo $K6_REPORT_PATH)\&quot;:/reports \
+        loadimpact/k6:latest \
+		run \
+		--vus $k6_vus \
+		--duration $k6_duration \
+		--out json=/reports/$(echo $K6_TEST_NAME) \
+		--out influxdb=http://localhost:8086/k6 \
+		/scripts/$k6_script&quot;
+
+eval $run_k6
+
+sudo rm -rf &quot;$WORKSPACE/k6_report&quot; &amp;&amp; sudo mkdir &quot;$WORKSPACE/k6_report&quot;
+sudo cp -r "/var/lib/k6/k6-result/$K6_TEST_NAME" "$WORKSPACE/k6_report/k6-result.json"
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <htmlpublisher.HtmlPublisher plugin="htmlpublisher@1.21">
+      <reportTargets>
+        <htmlpublisher.HtmlPublisherTarget>
+          <reportName>K6 report</reportName>
+          <reportDir>k6_report/</reportDir>
+          <reportFiles>k6-result.json</reportFiles>
+          <alwaysLinkToLastBuild>true</alwaysLinkToLastBuild>
+          <reportTitles></reportTitles>
+          <keepAll>true</keepAll>
+          <allowMissing>false</allowMissing>
+          <includes>**/*</includes>
+        </htmlpublisher.HtmlPublisherTarget>
+      </reportTargets>
+    </htmlpublisher.HtmlPublisher>
+  </publishers>
+  <buildWrappers/>
+</project>

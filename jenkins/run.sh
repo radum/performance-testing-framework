@@ -20,6 +20,15 @@ while [ $? -ne 0 ]; do
 done
 echo " "
 
+# TODO: Try to use curl instead of the jenkins jar?
+# curl localhost:8181/login
+# while [ $? -ne 0 ]; do
+#   echo -n "."
+#   sleep 2
+#   curl localhost:8181/login
+# done
+# echo " "
+
 echo "Trying to import jobs to jenkins"
 
 # create jenkins job if not exists or update otherwise

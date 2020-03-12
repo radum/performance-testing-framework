@@ -47,8 +47,7 @@ sudo usermod -aG staff jenkins && \
 echo "jenkins ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 ENV PATH "$PATH:/usr/local/bin/dind/"
 
-# drop back to the regular jenkins user - good practice
-# TODO: but if we do that then then docker can't run properly inside it fires some errors, I need to investigate.
+# Drop back to the regular jenkins user - good practice
 USER jenkins
 
 ENTRYPOINT ["bash","-x","/run.sh"]
