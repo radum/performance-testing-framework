@@ -11,3 +11,12 @@
 - https://gtmetrix.com/ - See how your site performs, reveal why it's slow and discover optimization opportunities.
 - https://requestmap.webperf.tools/ - Request map generator, compiles a chart of all requests and their dependencies.
 - https://crux.run/ - Instantaneous Historical Chrome User Experience Reports
+
+### Load testing
+
+- https://github.com/locustio/locust
+- https://github.com/Blazemeter/taurus
+
+## Articles
+
+- https://k6.io/blog/comparing-best-open-source-load-testing-tools
