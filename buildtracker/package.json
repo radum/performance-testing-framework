@@ -1,0 +1,11 @@
+{
+	"name": "buildtracker",
+	"version": "0.0.0",
+	"scripts": {
+	  "start": "bt-server setup && bt-server run"
+	},
+	"dependencies": {
+	  "@build-tracker/server": "1.0.0-beta.14",
+	  "@build-tracker/plugin-with-postgres": "latest"
+	}
+  }

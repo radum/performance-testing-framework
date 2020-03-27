@@ -1,0 +1,14 @@
+{
+  "name": "test-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "buildtracker": "bt-cli upload-build -b master --parent-revision d02af1e --skip-dirty-check"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@build-tracker/cli": "^1.0.0-beta.14"
+  }
+}

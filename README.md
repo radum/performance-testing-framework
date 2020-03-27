@@ -11,6 +11,7 @@ Framework consists of next services:
 - **Sitespeed.io**: set of tools for frontend load testing
 - **Webpagetest**: private instance of webpagetest server for frontend tests execution
 - **K6**: tool for backend load testing
+- **Build Tracker** tool for monitoring asset sizes and performance budgets
 - **Grafana**: data visualization & monitoring
 - **Graphite**: time series DB platform for metrics
 - **InfluxDB**: time series DB optimized for fast storage and retrieval of time series data
@@ -69,11 +70,12 @@ All containers should be up and running
 
 ### Services endpoints
 
-- **jenkins** localhost:8181
-- **LHCI** localhost:9001
-- **webpagetest server** localhost:4000
-- **grafana** localhost:3000
-- **portainer** localhost:9000
+- **jenkins** [localhost:8181](http://localhost:8181/)
+- **LHCI** [localhost:9001](http://localhost:9001/)
+- **webpagetest server** [localhost:4000](http://localhost:4000/)
+- **build tracker server** [localhost:9002](http://localhost:9002/)
+- **grafana** [localhost:3000](http://localhost:3000/)
+- **portainer** [localhost:9000](http://localhost:9000/)
 
 ### How to stop
 
@@ -130,6 +132,18 @@ The results will be saved on the associated k6 reports folder and also pushed to
 ![](docs/img/grafana-dashboard-k6-example.png)
 
 *To add this dashboard follow the instructions [here](https://k6.io/docs/results-visualization/influxdb-+-grafana).*
+
+## Build Tracker
+
+*Track performance budgets & prevent unexpected bloat.*
+
+![](docs/img/build-tracker-example.png)
+
+The docker compose services contains the build tracker server that can be used to send build artifacts from the build tracker CLI and monitor.
+
+Once the service is running access [localhost:9002](http://localhost:9002) to see the dashboard.
+
+In order to send build artifacts follow the instructions on the [docs site](https://buildtracker.dev/docs/packages/cli). You can also find an example in the test folder for build tracker in this repo.
 
 ## Grafana
 
