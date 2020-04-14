@@ -22,3 +22,4 @@
 ## Articles
 
 - https://k6.io/blog/comparing-best-open-source-load-testing-tools
+- https://paulirish.github.io/lh-scorecalc/
