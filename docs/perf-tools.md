@@ -13,6 +13,9 @@
 - https://crux.run/ - Instantaneous Historical Chrome User Experience Reports
 - https://github.com/Zizzamia/perfume.js - Web performance monitoring library which reports field data like FP/FCP, LCP, FID back to your favorite analytics tool.
 - https://github.com/zachleat/performance-leaderboard - A plugin to run Lighthouse against a set of urls to see which site is the fastest.
+- https://github.com/treosh/lighthouse-ci-action
+- https://github.com/projectwallace/css-diff-action
+- https://requestmap.herokuapp.com/
 
 ### Load testing
 
