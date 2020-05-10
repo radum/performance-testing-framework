@@ -16,7 +16,7 @@
 - https://github.com/treosh/lighthouse-ci-action
 - https://github.com/projectwallace/css-diff-action
 - https://requestmap.herokuapp.com/
-
+- https://github.com/addyosmani/puppeteer-webperf
 ### Load testing
 
 - https://github.com/locustio/locust
@@ -24,5 +24,12 @@
 
 ## Articles
 
+- https://addyosmani.com/blog/modern-ux-metrics-on-webpagetest/
 - https://k6.io/blog/comparing-best-open-source-load-testing-tools
 - https://paulirish.github.io/lh-scorecalc/
+- Scheduling Scripts Intuitively and Performantly - https://docs.google.com/document/d/16rHWLu-0abC9WWLhLBFlIRtbSnOFzhKAXsCamsp0oAs/edit#
+- https://addyosmani.com/blog/script-priorities/
+- Resource Fetch Prioritization and Scheduling in Chromium - https://docs.google.com/document/d/1bCDuq9H1ih9iNjgzyAL0gpwNFiEP4TZS-YLRp_RuMlc/edit#
+- https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf
+- https://csswizardry.com/2020/04/real-world-effectiveness-of-brotli/
+- https://timkadlec.com/remembers/2020-04-21-the-cost-of-javascript-frameworks/
