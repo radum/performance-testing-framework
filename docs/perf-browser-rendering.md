@@ -120,3 +120,9 @@ The browser needs to wait for all this to happen before it can do anything.
 
 - 6 Connections per origin (protocol + hostname)
 - Pick next-highest for each origin as a connection becomes available
+
+### Other Browser gotchas
+
+> NOTE: Some of this info could be moved into specific topics above.
+
+* V8 Parses JS as it comes down the wire, it doesn't need to wait for the whole thing.
