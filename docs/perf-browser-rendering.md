@@ -6,6 +6,7 @@
 - [ ] More info on the preload scanner
 - [ ] Example on how the parser works on an html file
 - [ ] In-browser priotitization
+- [ ] Most of it documented here https://www.youtube.com/watch?v=ct5MvtmL1NM&list=WL
 
 ## The Browser
 
