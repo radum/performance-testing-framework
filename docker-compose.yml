@@ -35,7 +35,7 @@ services:
     restart: unless-stopped
   sitespeed.io:
     container_name: sitespeed.io
-    image: sitespeedio/sitespeed.io:13.0.0-plus1
+    image: sitespeedio/sitespeed.io:14.0.0-plus1
     command: -V
     shm_size: 2g
     volumes:
@@ -88,12 +88,12 @@ services:
       - GF_AUTH_ANONYMOUS_ENABLED=true
       - GF_USERS_ALLOW_SIGN_UP=false
       - GF_USERS_ALLOW_ORG_CREATE=false
-      - GF_INSTALL_PLUGINS=briangann-datatable-panel,raintank-worldping-app
+      - GF_INSTALL_PLUGINS=grafana-piechart-panel
     volumes:
       - grafana:/var/lib/grafana
     restart: unless-stopped
   grafana-setup:
-    image: sitespeedio/grafana-bootstrap:12.1.0
+    image: sitespeedio/grafana-bootstrap:14.0.0
     links:
       - grafana
     environment:

@@ -79,7 +79,7 @@ sudo cp -r "/var/lib/k6/k6-result/$K6_TEST_NAME" "$WORKSPACE/k6_report/k6-result
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <htmlpublisher.HtmlPublisher plugin="htmlpublisher@1.21">
+    <htmlpublisher.HtmlPublisher plugin="htmlpublisher@1.23">
       <reportTargets>
         <htmlpublisher.HtmlPublisherTarget>
           <reportName>K6 report</reportName>

@@ -108,7 +108,7 @@ sudo cp -r $(ls -Art *.html | tail -n 1) "$WORKSPACE/lhci_report"
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <htmlpublisher.HtmlPublisher plugin="htmlpublisher@1.21">
+    <htmlpublisher.HtmlPublisher plugin="htmlpublisher@1.23">
       <reportTargets>
         <htmlpublisher.HtmlPublisherTarget>
           <reportName>LHCI report</reportName>
