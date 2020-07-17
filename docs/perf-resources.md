@@ -7,3 +7,7 @@
 ### HTTP/2
 
 - HTTP/2 Prioritization - Velocity 2019 https://www.youtube.com/watch?v=ct5MvtmL1NM&list=WL 
+
+## Other (needs sorting)
+
+- https://github.com/andydavies/http2-prioritization-issues
