@@ -1,4 +1,4 @@
-FROM grafana/grafana:7.0.6
+FROM grafana/grafana:7.2.1
 
 # USER root
 # RUN apt-get update && \

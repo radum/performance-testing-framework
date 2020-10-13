@@ -18,6 +18,7 @@
 - https://github.com/projectwallace/css-diff-action
 - https://requestmap.herokuapp.com/
 - https://github.com/addyosmani/puppeteer-webperf
+- https://github.com/patrickhulce/cuzillion
 
 ### Load testing
 
@@ -27,6 +28,10 @@
 ### Networking
 
 - https://github.com/davecheney/httpstat It's like curl -v, with colours.
+
+### Benchmarking
+
+- https://github.com/TracerBench/tracerbench Automated Chrome Tracing For Benchmarking
 
 ## Articles
 

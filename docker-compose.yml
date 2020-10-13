@@ -29,13 +29,13 @@ services:
     privileged: true
     network_mode: "host"
     extra_hosts:
-      - "local.dev:10.8.10.11"
+      - "local-app.dev:192.168.0.161"
     env_file:
       - wpt.env
     restart: unless-stopped
   sitespeed.io:
     container_name: sitespeed.io
-    image: sitespeedio/sitespeed.io:14.0.0-plus1
+    image: sitespeedio/sitespeed.io:15.4.0-plus1
     command: -V
     shm_size: 2g
     volumes:
@@ -74,7 +74,9 @@ services:
       - ./k6/scripts:/scripts
   grafana:
     container_name: grafana
-    build: ./grafana
+    image: grafana/grafana:7.2.1
+    hostname: grafana
+    # build: ./grafana
     depends_on:
       - graphite
     links:
@@ -102,6 +104,7 @@ services:
   graphite:
     container_name: graphite
     image: sitespeedio/graphite:1.1.5-12
+    hostname: graphite
     ports:
       - "2003:2003"
       - "8080:80"
