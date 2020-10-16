@@ -20,6 +20,7 @@ services:
       # TODO: Explore why I can't use http://wpt_server:4000/work/
       SERVER_URL: http://localhost:4000/work/
       LOCATION: Local_Docker
+      KEY: location_key_1
       NAME: default-wpt-agent
       EXTRA_ARGS: "--log /debug.log -vvvv"
     depends_on:
@@ -35,7 +36,7 @@ services:
     restart: unless-stopped
   sitespeed.io:
     container_name: sitespeed.io
-    image: sitespeedio/sitespeed.io:15.4.0-plus1
+    image: sitespeedio/sitespeed.io:15.5.0-plus1
     command: -V
     shm_size: 2g
     volumes:

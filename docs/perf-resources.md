@@ -32,3 +32,4 @@
 - https://github.com/davidsonfellipe/awesome-wpo
 - https://twitter.com/iamakulov/status/1275942433214390273
 - https://twitter.com/csswizardry/status/1276854595382325248
+- https://github.com/Nooshu/wpt-jq-data-scripts
