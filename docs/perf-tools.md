@@ -19,6 +19,9 @@
 - https://requestmap.herokuapp.com/
 - https://github.com/addyosmani/puppeteer-webperf
 - https://github.com/patrickhulce/cuzillion
+- https://pagespeed.compare/
+- https://googlechrome.github.io/lighthouse-ci/viewer/
+- https://github.com/cloudfour/lighthouse-parade
 
 ### Load testing
 

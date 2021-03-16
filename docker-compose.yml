@@ -28,6 +28,8 @@ services:
     ports:
       - "4001:80"
     privileged: true
+    cap_add:
+      - NET_ADMIN
     network_mode: "host"
     extra_hosts:
       - "local-app.dev:192.168.0.161"
@@ -36,7 +38,7 @@ services:
     restart: unless-stopped
   sitespeed.io:
     container_name: sitespeed.io
-    image: sitespeedio/sitespeed.io:15.5.0-plus1
+    image: sitespeedio/sitespeed.io:16.10.0-plus1
     command: -V
     shm_size: 2g
     volumes:
@@ -75,7 +77,7 @@ services:
       - ./k6/scripts:/scripts
   grafana:
     container_name: grafana
-    image: grafana/grafana:7.2.1
+    image: grafana/grafana:7.4.2
     hostname: grafana
     # build: ./grafana
     depends_on:
@@ -96,7 +98,7 @@ services:
       - grafana:/var/lib/grafana
     restart: unless-stopped
   grafana-setup:
-    image: sitespeedio/grafana-bootstrap:14.0.0
+    image: sitespeedio/grafana-bootstrap:16.0.0
     links:
       - grafana
     environment:
@@ -104,7 +106,7 @@ services:
       - GF_USER=sitespeedio
   graphite:
     container_name: graphite
-    image: sitespeedio/graphite:1.1.5-12
+    image: sitespeedio/graphite:1.1.7-9
     hostname: graphite
     ports:
       - "2003:2003"
@@ -182,12 +184,6 @@ services:
   #   restart: unless-stopped
 volumes:
     whisper:
-    # webpagetest-results:
-    # webpagetest-settings:
-    # webpagetest-logs:
-    # sitespeed:
-    # grafana-home:
-    # grafana-conf:
     influxdb:
     postgres:
     grafana:

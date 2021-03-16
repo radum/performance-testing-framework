@@ -158,8 +158,11 @@ The [Sitespeed.io](https://www.sitespeed.io/documentation/sitespeed.io/performan
 
 ## Useful Docker commands
 
-```
+```bash
+# Pull and rebuild the entire framework
 docker-compose build --pull --force-rm --no-cache
+
+# If you want to run only 1 service
 docker-compose -f docker-compose.yml -f docker-compose-macos.yml up lhci-server
 ```
 
