@@ -6,6 +6,7 @@
 - http://localhost:4000/getkey.php - Get an API key to use with WPT
 - http://localhost:4000/getTesters.php?f=html - Check to see what is connected
 - http://localhost:4000/getLocations.php?f=html - Show all locations data
+- http://localhost:4000/usage.php - Agents usage
 
 ## How Tos
 
