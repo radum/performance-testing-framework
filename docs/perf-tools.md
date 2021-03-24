@@ -21,7 +21,7 @@
 - https://github.com/patrickhulce/cuzillion
 - https://pagespeed.compare/
 - https://googlechrome.github.io/lighthouse-ci/viewer/
-- https://github.com/cloudfour/lighthouse-parade
+- https://github.com/cloudfour/lighthouse-parade - A Node.js command line tool that crawls a domain and gathers lighthouse performance data for every page. 
 
 ### Load testing
 
