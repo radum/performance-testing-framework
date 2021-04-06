@@ -22,6 +22,9 @@
 - https://pagespeed.compare/
 - https://googlechrome.github.io/lighthouse-ci/viewer/
 - https://github.com/cloudfour/lighthouse-parade - A Node.js command line tool that crawls a domain and gathers lighthouse performance data for every page. 
+- https://waterfaller.dev/ - Site Owners and marketers use Waterfaller to generate tasks for developers that boost page speed and Core Web Vital scores.
+- https://www.browserstack.com/speedlab - SpeedLab scores your website on important performance metrics so you can optimize your page speed to deliver the best user experience.
+- https://rviscomi.github.io/crux-dash-launcher/ - Launch directly into your own customized CrUX Dashboard
 
 ### Load testing
 
