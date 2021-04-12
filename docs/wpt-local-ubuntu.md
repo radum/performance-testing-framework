@@ -17,10 +17,25 @@ sudo apt -y install xserver-xorg-core xserver-xorg-video-dummy
 **Install WPT agent**
 
 ```bash
-WPT_SERVER="192.168.0.161:4000" WPT_LOCATION="Local_Ubuntu" WPT_KEY="location_key_1" DISABLE_IPV6=y WPT_EDGE=n WPT_BRAVE=n WPT_EPIPHANY=n bash <(curl -s https://raw.githubusercontent.com/WPO-Foundation/wptagent-install/master/debian.sh)
+WPT_DEVICE_NAME="Local Server" WPT_SERVER="192.168.0.161:4000" WPT_LOCATION="Local_Ubuntu" WPT_KEY="location_key_1" DISABLE_IPV6=y WPT_EDGE=n WPT_BRAVE=n WPT_EPIPHANY=n bash <(curl -s https://raw.githubusercontent.com/WPO-Foundation/wptagent-install/master/debian.sh)
+
+# Android
+WPT_DEVICE_NAME="Pixel 2XL" WPT_SERVER="192.168.0.161:4000" WPT_LOCATION="Local_Ubuntu_Android" WPT_KEY="location_key_1" AGENT_MODE=android DISABLE_IPV6=y WPT_EDGE=n WPT_BRAVE=n WPT_EPIPHANY=n bash <(curl -s https://raw.githubusercontent.com/WPO-Foundation/wptagent-install/master/debian.sh)
 ```
 
 > Replace the `WPT_SERVER` IP with your current local IP address, or the server address.
+
+**Android reverse tethering**
+
+Follow the instrcutions [here](https://github.com/Genymobile/gnirehtet) to instal gnirehtet on the server and on the device.
+
+Run gnirehtet and then the device will use the servers connection
+
+```bash
+gnirehtet run
+```
+
+> TODO: For now running the above makes the agent not to run the device anymore. Let the test start and right away run gnirehtet again and that will fix the issue.
 
 **Run WPT server locally**
 
