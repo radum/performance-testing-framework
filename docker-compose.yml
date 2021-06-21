@@ -7,6 +7,7 @@ services:
       - ./wpt_data/dat:/var/www/html/dat
       - ./wpt_data/results:/var/www/html/results
       - ./wpt_data/logs:/var/www/html/logs
+      - ./wpt-server/settings/keys.ini:/var/www/html/settings/keys.ini
       - ./wpt-server/settings/locations.ini:/var/www/html/settings/locations.ini
       - ./wpt-server/settings/settings.ini:/var/www/html/settings/settings.ini
     ports:
@@ -38,7 +39,7 @@ services:
     restart: unless-stopped
   sitespeed.io:
     container_name: sitespeed.io
-    image: sitespeedio/sitespeed.io:16.10.0-plus1
+    image: sitespeedio/sitespeed.io:17.8.1-plus1
     command: -V
     shm_size: 2g
     volumes:
@@ -77,7 +78,7 @@ services:
       - ./k6/scripts:/scripts
   grafana:
     container_name: grafana
-    image: grafana/grafana:7.4.2
+    image: grafana/grafana:8.0.0
     hostname: grafana
     # build: ./grafana
     depends_on:
@@ -98,7 +99,7 @@ services:
       - grafana:/var/lib/grafana
     restart: unless-stopped
   grafana-setup:
-    image: sitespeedio/grafana-bootstrap:16.0.0
+    image: sitespeedio/grafana-bootstrap:17.5.0
     links:
       - grafana
     environment:

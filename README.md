@@ -2,6 +2,24 @@
 
 This framework could be used for frontend load testing with sitespeed.io (with lighthouse) and webpagetest private instance.
 
+- [Performance testing framework](#performance-testing-framework)
+  - [Getting Started](#getting-started)
+  - [Framework architecture:](#framework-architecture)
+  - [Prerequisites](#prerequisites)
+  - [Installing](#installing)
+  - [How to run](#how-to-run)
+    - [Services endpoints](#services-endpoints)
+    - [How to stop](#how-to-stop)
+  - [Jenkins](#jenkins)
+    - [Frontend Job](#frontend-job)
+    - [LHCI Job](#lhci-job)
+    - [K6 Job](#k6-job)
+  - [Build Tracker](#build-tracker)
+  - [Grafana](#grafana)
+    - [Available metrics](#available-metrics)
+  - [Useful Docker commands](#useful-docker-commands)
+  - [TODO](#todo)
+  - [Other examples](#other-examples)
 
 ## Getting Started
 
@@ -61,7 +79,7 @@ docker-compose up
 **Mac OS does not support network shaping.**
 
 ```shell
-docker-compose -f docker-compose.yml -f docker-compose-macos.yml up
+docker compose -f docker-compose.yml -f docker-compose-macos.yml up
 ```
 
 Native Connection (No Traffic Shaping) will have to be used in order to work as there is no traffic shaping enabled.
@@ -80,7 +98,7 @@ All containers should be up and running
 ### How to stop
 
 ```shell
-docker-compose down
+docker compose down
 ```
 
 ## Jenkins

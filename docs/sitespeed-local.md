@@ -13,12 +13,12 @@ docker run \
     --shm-size=2g \
     --rm \
     -v "$(pwd):/sitespeed.io" \
-    sitespeedio/sitespeed.io:16.10.0-plus1 \
+    sitespeedio/sitespeed.io:17.8.1-plus1 \
     -e REPLAY=true \
     -e LATENCY=100 \
     -n 3 \
     -c 3gfast \
-    -b chrome \
+    --browser chrome \
     --browsertime.viewPort 1920x1080 \
     --speedIndex \
     --visualElements \
@@ -53,13 +53,13 @@ docker run \
     --shm-size=2g \
     --rm \
     -v "$(pwd):/sitespeed.io" \
-    sitespeedio/sitespeed.io:16.10.0-plus1 \
+    sitespeedio/sitespeed.io:17.8.1-plus1 \
     -e REPLAY=true \
     -e LATENCY=100 \
     -n 3 \
     -c 3gfast \
     --connectivity.engine=throttle \
-    -b chrome \
+    --browser chrome \
     --browsertime.viewPort 1920x1080 \
     --speedIndex \
     --visualElements \
@@ -69,5 +69,6 @@ docker run \
     --chrome.timeline \
     --thirdParty.cpu \
     --sustainable.enable \
+    --crux.key=AIzaSyA3S1ySgmryewmBSvxvme7udpOTa6LoGHA \
     https://example.com
 ```
