@@ -2,6 +2,23 @@
 
 > Performance related tools used to measure, test, report and debug performance.
 
+- [Performance tools](#performance-tools)
+  - [Tools](#tools)
+    - [Free tools and services](#free-tools-and-services)
+      - [Performance Audits](#performance-audits)
+      - [Webpagetest](#webpagetest)
+      - [Lighthouse & CrUX & Core Web Vitals](#lighthouse--crux--core-web-vitals)
+      - [Images & Video](#images--video)
+      - [Thirdparty](#thirdparty)
+      - [Development Tools](#development-tools)
+      - [Network Tools](#network-tools)
+      - [Load testing](#load-testing)
+      - [Benchmarking](#benchmarking)
+      - [Fonts](#fonts)
+      - [Other Tools](#other-tools)
+    - [Paid tools and services](#paid-tools-and-services)
+  - [Needs sorting](#needs-sorting)
+
 ## Tools
 
 ### Free tools and services
@@ -29,6 +46,8 @@ The Request Map Generator is the go to place to understand what 3rd party tools 
 
 #### Lighthouse & CrUX & Core Web Vitals
 
+- [Multihouse](https://github.com/samdutton/multihouse)
+Multiple Lighthouse runs for multiple URLs
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
 Lighthouse is becoming the best audit tool for web performance. It has a great documentation and gives valuable insights. This is where my performance audit is starting.
 - [Lighthouse Parade](https://github.com/cloudfour/lighthouse-parade)
@@ -75,6 +94,8 @@ Image analysis tool. This tool gives you insight about how you can optimise your
 Easily generate the optimal responsive image dimensions
 - [ImageOptim](https://imageoptim.com/)
 Image compression
+- [ImageAlpha](https://pngmini.com/)
+Free png optimizer for MacOS
 
 #### Thirdparty
 
@@ -128,6 +149,7 @@ Find out how much turning on modern JS could save.
 Compares the HTTP archive data of different JavaScript Frameworks
 - [Source Map Explorer](https://www.npmjs.com/package/source-map-explorer), [Webpack Bundle Analyer](https://www.npmjs.com/package/webpack-bundle-analyzer)
 Understand what code you are loading
+- [Bundle per page type/entry point](https://bundlers.tooling.report/code-splitting/multi-pages/)
 - [You might not need Javascript](http://youmightnotneedjs.com/)
 Don’t use Javascript for things where it is not really needed. This website shows you to do stuff with CSS: Slider, Modal, Scroll Indicator, Navigation, Tabs, Accordion
 - [You might not need jQuery](http://youmightnotneedjquery.com/)
@@ -135,6 +157,11 @@ Learn how to get rid of jQuery dependencies in your project. This page shows you
 - [Browser Scope](https://www.browserscope.org/)
 Browserscope is a community-driven project for profiling web browsers. The goals are to foster innovation by tracking browser functionality and to be a resource for web developers.
 - [CSS stats](https://cssstats.com/)
+
+**Chrome dev tools Extensions**
+
+- [DOM Treemap](https://github.com/Schepp/dom-treemap-devtools-extension)
+A Chrome Devtools extension that helps you explore the distribution of DOM nodes in the document tree.
 
 #### Network Tools
 
@@ -163,8 +190,12 @@ Find the CDN which is right for you.
 
 #### Load testing
 
-- https://github.com/locustio/locust
-- https://github.com/Blazemeter/taurus
+- [locust](https://github.com/locustio/locust)
+Locust is an easy to use, scriptable and scalable performance testing tool. You define the behaviour of your users in regular Python code.
+- [taurus](https://github.com/Blazemeter/taurus)
+Hides the complexity of performance and functional tests with an automation-friendly convenience wrapper. Taurus relies on JMeter, Gatling, Locust.io, Grinder and Selenium WebDriver as its underlying tools. Free and open source under Apache 2.0 License.
+- [plow](https://github.com/six-ddc/plow)
+Plow is a HTTP(S) benchmarking tool, written in Golang.
 
 #### Benchmarking
 
@@ -203,6 +234,10 @@ Prints the timing data on assets.
 A visualization tool that helps understand relationship between page speed, conversion and bounce rates. Does not require a real data (e.g. RUM) and lets you tweak the distributions yourself
 - [SERP Speed](https://reddico.co.uk/tools/serp-speed/)
 Compare your page speed at keyword level with the rest
+- [NPM dependency graph](https://npmgraph.js.org/)
+Generates the NPM dependency graph by uploading a package.json file
+- [HAR Analyzer](https://github.com/kevinfarrugia/hara)
+HAR Analyzer is a Node.js-based tool for performing simple analysis on HTTP Archive (.har) files.
 
 ### Paid tools and services
 

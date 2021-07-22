@@ -53,3 +53,13 @@ time_total: 0.164
 This will get time to first byte, which is the time_starttransfer line.
 
 The other timing details include DNS lookup, TCP connect, pre-transfer negotiations, redirects (in this case there were none), and of course the total time.
+
+## CrUX Data
+
+### Use a Google chrome search engine to find CrUX data for an origin
+
+In Google Chrome go to settings and add a custom search engine:
+
+Search engine: CrUX
+Keyword: crux
+Query URL: https://datastudio.google.com/c/u/0/reporting/bbc5698d-57bb-4969-9e07-68810b9fa348/page/keDQB?params=%7B%22origin%22:%22%s%22%7D

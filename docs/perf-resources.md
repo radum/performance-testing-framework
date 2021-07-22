@@ -18,6 +18,7 @@
     - [Javascript and Render Performance](#javascript-and-render-performance)
     - [Perceived performance](#perceived-performance)
     - [Tooling Articles](#tooling-articles)
+    - [Energy Consumption and sustainability](#energy-consumption-and-sustainability)
   - [Online courses](#online-courses)
     - [Free Web Courses](#free-web-courses)
     - [Free Video Courses](#free-video-courses)
@@ -35,6 +36,7 @@
     - [Meta](#meta)
   - [Books](#books)
   - [Podcasts](#podcasts)
+  - [Video Formats](#video-formats)
   - [Tools](#tools)
   - [Open Source Projects](#open-source-projects)
   - [Studies](#studies)
@@ -67,6 +69,8 @@
 - [Ask Me Anything - Core Web Vitals](https://www.youtube.com/watch?v=HWm6WNkHs90&t=615s), Google I/O 2021, [05/2021]
 - [Optimizing Web Vitals using Lighthouse](https://web.dev/optimize-vitals-lighthouse/), Addy Osmani, [05/2021]
 - [Cumulative Layout Shift: Measure and Avoid Visual Instability](https://calibreapp.com/blog/cumulative-layout-shift), Karolina Szczur, [05/2021]
+- [The do’s and don’ts of Core Web Vitals](https://contentsquare.com/blog/the-dos-and-donts-of-core-web-vitals-with-iprospect/), Ric Riley, [06/2021]
+- [Towards a better responsiveness metric](https://web.dev/better-responsiveness-metric/), Nicolás Peña Moreno & Annie Sullivan & Hongbo Song, [06/2021]
 - [More time, tools, and details on the page experience update](https://developers.google.com/search/blog/2021/04/more-details-page-experience), Jeffrey Jose (Google), [04/2021]
 - [The Almost-Complete Guide to Cumulative Layout Shift](https://jessbpeck.com/posts/completecls/), Jess B Pack, [04/2021]
 - [An In-Depth Guide To Measuring Core Web Vitals](https://www.smashingmagazine.com/2021/04/complete-guide-measure-core-web-vitals/), Barry Pollard, [04/2021]
@@ -97,6 +101,7 @@
 
 ### General
 
+- [Fast load times Techniques for improving site performance.](https://web.dev/fast/)
 - [Resource Fetch Prioritization and Scheduling in Chromium](https://docs.google.com/document/d/1bCDuq9H1ih9iNjgzyAL0gpwNFiEP4TZS-YLRp_RuMlc/edit) - [08/2015]
 - [How To Perform An SEO Audit Using Google Search Console](https://seosly.com/how-to-audit-site-with-google-search-console/), Olga Zarzeczna, [06/2021]
 - [Website Speed: Advice from the trenches](https://www.cmg.digital/website-speed-advice-from-the-trenches), Bojan Basrak, [05/2021]
@@ -148,6 +153,8 @@
 
 ### Image and Video Optimization
 
+- [Web Performance: Trends and Insights from 4 Top Performance Experts](https://cloudinary.com/products/media_optimizer/web-performance-guide), cloudinary, [07/2021]
+- [GIFS on the web: A new way to bloat](https://dougsillars.com/2021/06/21/gifs-on-the-web-a-new-way-to-bloat/), Doug Sillars, [06/2021]
 - [Serving sharp images to high density screens](https://jakearchibald.com/2021/serving-sharp-images-to-high-density-screens/), Jake Archibald, [06/2021]
 - [The Humble <img> Element And Core Web Vitals](https://www.smashingmagazine.com/2021/04/humble-img-element-core-web-vitals/), Addy Osmani, [04/4021]
 - [Time for Next-Gen Codecs to Dethrone JPEG](https://cloudinary.com/blog/time_for_next_gen_codecs_to_dethrone_jpeg), Jon Sneyers, [02/2020]
@@ -174,6 +181,7 @@
 - [A New Way To Reduce Font Loading Impact: CSS Font Descriptors](https://www.smashingmagazine.com/2021/05/reduce-font-loading-impact-css-descriptors/), Barry Pollard, [05/2021]
 - [5 steps to faster web fonts](https://iainbean.com/posts/2021/5-steps-to-faster-web-fonts/), Iain Bean, [05/2021]
 - [How I set up Glyphhanger on macOS for optimizing and converting font files for the Web](https://www.sarasoueidan.com/blog/glyphhanger/), Sara Soueidan, [03/2021]
+- [More than you ever wanted to know about font loading on the web](https://deploy-preview-15--upbeat-shirley-608546.netlify.app/posts/high-performance-web-font-loading/), Malte Ubl, [01/2021]
 - [The importance of `@font-face` source order when used with preload](https://nooshu.github.io/blog/2021/01/23/the-importance-of-font-face-source-order-when-used-with-preload/), Matt Hobbs, [01/2021]
 - [How to avoid layout shifts caused by web fonts](https://simonhearne.com/2021/layout-shifts-webfonts/), Simon Hearne, [01/2021]
 - [Preloading Fonts and the Puzzle of Priorities](https://andydavies.me/blog/2019/02/12/preloading-fonts-and-the-puzzle-of-priorities/), Andy Davies, [02/2019]
@@ -181,6 +189,9 @@
 
 ### Measure Performance
 
+- [Reducing variability in web performance metrics](https://www.debugbear.com/blog/web-performance-test-variability), debugbear, [11/2020]
+- [Why is my Lighthouse score different from PageSpeed Insights?](https://www.debugbear.com/blog/why-is-my-lighthouse-score-different-from-pagespeed-insights), debugbear, [08/2019]
+- [Measure the performance of a web application with Lighthouse CI in a GitLab CI pipeline](https://medium.com/tuimm/measure-performance-web-app-with-lighthouse-ci-in-a-gitlab-pipeline-dd292842e40d), Aurelio Merenda, [06/2021]
 - [Benchmarking JavaScript Memory Usage](https://blog.webpagetest.org/posts/benchmarking-javascript-memory-usage/), Tim Kadlec, [06/2021]
 - [How Real User Monitoring will improve GOV.UK for everyone](https://insidegovuk.blog.gov.uk/2021/06/16/how-real-user-monitoring-will-improve-gov-uk-for-everyone/), Matt Hobbs, [06/2021]
 - [How Lighthouse 8 Changes Affect Your Metrics](https://calibreapp.com/blog/lighthouse-8), Karolina Szczur, [06/2021]
@@ -267,6 +278,7 @@
 
 ### Javascript and Render Performance
 
+- [The real cost of Javascript dependencies (and the state of JS package quality)](https://medium.com/voodoo-engineering/the-real-cost-of-javascript-dependencies-and-the-state-of-js-package-quality-a8dacd74c0ec), Vincent Vallet, [06/2021]
 - [Scheduling Scripts Intuitively and Performantly](https://docs.google.com/document/d/16rHWLu-0abC9WWLhLBFlIRtbSnOFzhKAXsCamsp0oAs/edit#)
 - [The Cost of Javascript Frameworks](https://timkadlec.com/remembers/2020-04-21-the-cost-of-javascript-frameworks/) - [04/2020]
 - [JavaScript Loading Priorities in Chrome](https://addyosmani.com/blog/script-priorities/) - [02/2019]
@@ -326,6 +338,7 @@
 
 ### Tooling Articles
 
+- [WebPageTest Sorcery Using Google Sheets](https://blr.design/blog/webpagetest-in-google-sheets/), Brian Louis Ramirez, [06/2021]
 - [Using Chrome Local Overrides To Optimize Page Speed](https://blr.design/blog/local-overrides/), Brian Louis Ramirez, [05/2021]
 - [WebPageTest API](https://css-tricks.com/webpagetest-api/), Chris Coyier, [05/2021]
 - [Profiling site speed with the Chrome DevTools Performance tab](https://www.debugbear.com/blog/devtools-performance), DebugBear, [04/2021]
@@ -334,6 +347,10 @@
 - [Web Performance Recipes With Puppeteer](https://addyosmani.com/blog/puppeteer-recipes/), Addy Osmani, [04/2020]
 - [Cloudflare Workers](https://github.com/pmeenan/cf-workers), Pat Meenan, Collection of Cloudflare Worker scripts, generally focused on performance optimizations
 - [Chrome Flags for Tooling](https://github.com/GoogleChrome/chrome-launcher/blob/master/docs/chrome-flags-for-tools.md), Paul Irish
+
+### Energy Consumption and sustainability
+
+- [Green Energy Efficient Progressive Web Apps](https://devblogs.microsoft.com/sustainable-software/green-energy-efficient-progressive-web-apps/), David Rousset, [11, 2020]
 
 ## Online courses
 
@@ -368,6 +385,8 @@ Not 100% related to Web Performance. A few of the trainings are available for fr
 - [devcademy - Web performance workshop](https://devcademy.marcradziwill.com/web-performance-workshop), Marc Radziwill, 08/2020 (299€ - 750
 
 ## Videos
+
+- [Top 10 performance pitfalls - HTTP 203](https://www.youtube.com/watch?v=Lh9q3h2khlc), Jack Archibald & Surma, [06/2021]
 
 ### A crash course on web performance
 
@@ -436,6 +455,7 @@ This is a really good talk about how humans perceive performance. Eli shares a l
 
 ### Measure
 
+- [How to test site speed optimizations with Compute@Edge](https://www.fastly.com/blog/how-to-test-site-speed-optimizations-with-compute-edge), Leon Brocard, [06/2021]
 - [WebPageTest and Cloudflare Workers – A Performance Consultant’s Dream Combo?](https://www.youtube.com/watch?v=YSS0a0uaDvk), Andy Davies, 20/2020 – 🚀
 - [How website speed can impact digital ad revenue](https://www.youtube.com/watch?v=EwlmYec3M-s) ([Slides](https://simonhearne.github.io/presentations/digital-revenue/#/)), Simon Hearne, 06/2019
 - [Crash Course in CrUX](https://www.youtube.com/watch?v=YUD5mDOJmhE), [Slides](https://gist.github.com/rviscomi/250bee3c02d1bf9e6e1f528c8813c535), Rick Viscomi, 04/2018 - perfmatters
@@ -479,6 +499,7 @@ This is a really good talk about how humans perceive performance. Eli shares a l
 
 ### Development
 
+- [Web Performance Tuning with browser APIs](https://www.youtube.com/watch?v=ALN1v_sBe2g), Yaser Adel Mehraban, [06/2021]
 - [Transitioning to modern JavaScript](https://www.youtube.com/watch?v=cLxNdLK--yI) ([Article](https://web.dev/publish-modern-javascript/)), Houssein Djirdeh, Jason Miller, Chrome Dev Summit 2020, 12/2020
 - [When JavaScript Bytes](https://www.youtube.com/watch?v=JvJ0v5OohNg) ([Slides](https://noti.st/tkadlec/MC0Bvy/when-javascript-bytes)), Tim Kadlec, 11/2019
 - [Adaptive Loading — Improving the UX for millions on low-end devices](https://www.youtube.com/watch?v=puUPpVrIRkc), Addy Osmany, 11/2019
@@ -542,6 +563,11 @@ Another classic book.
 ## Podcasts
 
 - ...
+
+## Video Formats
+
+- [WebPageTest - Twitch](https://www.twitch.tv/webpagetest): Bi-weekly live show on Twitch by Tim Kadlec around Webpagetest topics (Catchpoint)
+- [Speed@Scale](https://www.youtube.com/hashtag/speedatscale): Web Performance audits by Tracy Lee (@ladyleet) and guests
 
 ## Tools
 
