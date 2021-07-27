@@ -17,10 +17,10 @@ sudo apt -y install xserver-xorg-core xserver-xorg-video-dummy
 **Install WPT agent**
 
 ```bash
-WPT_DEVICE_NAME="Local Server" WPT_SERVER="192.168.0.161:4000" WPT_LOCATION="Local_Ubuntu" WPT_KEY="location_key_1" DISABLE_IPV6=y WPT_EDGE=n WPT_BRAVE=n WPT_EPIPHANY=n bash <(curl -s https://raw.githubusercontent.com/WPO-Foundation/wptagent-install/master/debian.sh)
+WPT_DEVICE_NAME="Local Server" WPT_SERVER="192.168.0.150:4000" WPT_LOCATION="Local_Ubuntu" WPT_KEY="location_key_1" DISABLE_IPV6=y WPT_EDGE=n WPT_BRAVE=n WPT_EPIPHANY=n bash <(curl -s https://raw.githubusercontent.com/WPO-Foundation/wptagent-install/master/debian.sh)
 
 # Android
-WPT_DEVICE_NAME="Pixel 2XL" WPT_SERVER="192.168.0.161:4000" WPT_LOCATION="Local_Ubuntu_Android" WPT_KEY="location_key_1" AGENT_MODE=android DISABLE_IPV6=y WPT_EDGE=n WPT_BRAVE=n WPT_EPIPHANY=n bash <(curl -s https://raw.githubusercontent.com/WPO-Foundation/wptagent-install/master/debian.sh)
+WPT_DEVICE_NAME="Pixel 2XL" WPT_SERVER="192.168.0.150:4000" WPT_LOCATION="Local_Ubuntu_Android" WPT_KEY="location_key_1" AGENT_MODE=android DISABLE_IPV6=y WPT_EDGE=n WPT_BRAVE=n WPT_EPIPHANY=n bash <(curl -s https://raw.githubusercontent.com/WPO-Foundation/wptagent-install/master/debian.sh)
 ```
 
 > Replace the `WPT_SERVER` IP with your current local IP address, or the server address.
@@ -47,7 +47,7 @@ docker-compose -f docker-compose.yml -f docker-compose-macos.yml up wpt_server
 
 ```
 http://localhost:4000/
-http://192.168.0.161:4000/
+http://192.168.0.150:4000/
 ```
 
 **Install mkcert and set the same CA as your local**
@@ -58,7 +58,7 @@ To test local dev servers via https you can use mkcert to setup a CA locally, an
 
 1. Install mkcert - https://github.com/FiloSottile/mkcert
 2. Follow mkcert install for other systems - https://github.com/FiloSottile/mkcert#installing-the-ca-on-other-systems
-3. Edit `/etc/hosts` on the VM to point your local dev URL to your host IP, Ex: `192.168.0.161 local.dev`
+3. Edit `/etc/hosts` on the VM to point your local dev URL to your host IP, Ex: `192.168.0.150 local.dev`
 
 Run tests via `https://local.dev`.
 
@@ -67,7 +67,7 @@ Run tests via `https://local.dev`.
 ```
 sudo modprobe ifb numifbs=1
 sudo docker run -d \
-  -e SERVER_URL="http://192.168.0.161:4000/work/" \
+  -e SERVER_URL="http://192.168.0.150:4000/work/" \
   -e LOCATION="Local_Ubuntu" \
   -e KEY="location_key_1" \
   -e NAME="Local Ubuntu Desktop" \
@@ -104,7 +104,7 @@ sudo docker run -d \
 sudo docker build --tag wptagent .
 sudo modprobe ifb numifbs=1
 sudo docker run -d --init \
-  -e SERVER_URL="http://192.168.0.161:4000/work/" \
+  -e SERVER_URL="http://192.168.0.150:4000/work/" \
   -e LOCATION="Local_Ubuntu" \
   -e KEY="location_key_1" \
   -e NAME="Local Ubuntu Desktop" \

@@ -33,7 +33,7 @@ services:
       - NET_ADMIN
     network_mode: "host"
     extra_hosts:
-      - "local-app.dev:192.168.0.161"
+      - "local-app.dev:192.168.0.150"
     env_file:
       - wpt.env
     restart: unless-stopped
