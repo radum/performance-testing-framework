@@ -39,7 +39,7 @@ services:
     restart: unless-stopped
   sitespeed.io:
     container_name: sitespeed.io
-    image: sitespeedio/sitespeed.io:17.8.1-plus1
+    image: sitespeedio/sitespeed.io:19.6.0-plus1
     command: -V
     shm_size: 2g
     volumes:
@@ -78,7 +78,7 @@ services:
       - ./k6/scripts:/scripts
   grafana:
     container_name: grafana
-    image: grafana/grafana:8.0.0
+    image: grafana/grafana:8.1.5
     hostname: grafana
     # build: ./grafana
     depends_on:

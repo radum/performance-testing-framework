@@ -2,6 +2,21 @@
 
 > Using various tools to get raw data or trigger certain actions.
 
+## General
+
+Log all link rel urls from a page in the dev tools console.
+
+```js
+const rels = ['preload', 'prefetch', 'preconnect', 'dns-prefetch', 'prerender', 'modulepreload']
+
+rels.forEach(element => {
+  const linkElements = document.querySelectorAll(`link[rel="${element}"]`)
+  const dot = linkElements.length > 0 ? '🟩' : '🟥'
+  console.log(`${dot} ${element}`)
+  linkElements.forEach(el => console.log(el))
+});
+```
+
 ## cURL
 
 ### Find the Time to First Byte Using Curl
