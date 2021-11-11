@@ -15,6 +15,7 @@
       - [Load testing](#load-testing)
       - [Benchmarking](#benchmarking)
       - [Fonts](#fonts)
+      - [Browser Extensions](#browser-extensions)
       - [Other Tools](#other-tools)
     - [Paid tools and services](#paid-tools-and-services)
   - [Needs sorting](#needs-sorting)
@@ -79,15 +80,18 @@ A node CLI script to grab Largest Contentful Paint, First Input Delay & Cumulati
 - [Layout Shift GIF Generator](https://defaced.dev/tools/layout-shift-gif-generator/): Visualise the Core Web Vitals metric Cumulative Layout Shift (CLS) with a simple GIF.
 - [Cumulative Layout Shift Debugger](https://webvitals.dev/cls): Visualise the Cumulative Layout Shift (CLS) to identify what needs improving on mobile and/or desktop in the initial load of a website.
 - [Batch Speed: Bulk speed test multiple urls using Google's Page Speed checker](https://batchspeed.com/)
+- [Layout Shift Terminator](https://googlechromelabs.github.io/layout-shift-terminator/):
+The following tool allows you to enter arbitrary markup which causes layout shifts (e.g. social embed) in order load the markup at various viewport sizes to be able to measure the dimensions at each. With this information it then provides optimized markup with responsive media queries to reduce the amount of layout shifting when the markup is rendered on a loading page.
 
 #### Images & Video
 
 - [AVPress](https://avpress.zaps.dev/)
 Compress & resize videos in the browser thanks to WebAssembly and FFMPEG.WASM.
 - [Squoosh](https://squoosh.app)
-Upload an image and compare the original with different compressed version to find a good balance between filesize and image quality. – 🚀 
+Upload an image and compare the original with different compressed version to find a good balance between filesize and image quality. – 🚀
 - [I just want to put an image on my page](https://just-gimme-an-img.vercel.app/) ([Article](https://paul.kinlan.me/images-are-still-too-hard/))
 Optimizes images and generate the HTML for you.
+- [See How Images Affect Your Page Speed](https://pageweight.imgix.com)
 - [Image Analyser](https://webspeedtest.cloudinary.com/)
 Image analysis tool. This tool gives you insight about how you can optimise your images to gain a better web performance. This tool is also integrated within webpagetest.org.
 - [Responsive Image Breakpoints Generator v2.0](https://responsivebreakpoints.com/)
@@ -123,6 +127,7 @@ Understand the technical building blocks of a website.
 
 #### Development Tools
 
+- [HTML Size Analyzer by DebugBear](https://www.debugbear.com/html-size-analyzer)
 - [PurifyCSS Online](https://purifycss.online/)
 Insert your website URL below and find out by how much of your CSS file size can be reduced
 - [Microsoft WebHint](https://webhint.io/)
@@ -165,8 +170,10 @@ A Chrome Devtools extension that helps you explore the distribution of DOM nodes
 
 #### Network Tools
 
+- [Fast or Slow](https://www.fastorslow.com/)
+Global Website Speed Profiler
 - [https://httpstatus.io/](https://httpstatus.io/)
-Service which shows status codes, latency, response headers and more from the URL you submit. This is great to check for redirects and other network related issues. 
+Service which shows status codes, latency, response headers and more from the URL you submit. This is great to check for redirects and other network related issues.
 - [Cloud Ping](http://www.cloudping.info/)
 See the network latency from your location to all AWS centres in the work.
 - [Charles Web Debugging Proxy](https://www.charlesproxy.com/) (free/$50)
@@ -218,6 +225,19 @@ A good tool to create woff2 fonts
 - [Google Web Fonts Helper](https://google-webfonts-helper.herokuapp.com/fonts)
 A Hassle-Free Way to Self-Host Google Fonts by Mario Ranftl
 
+#### Browser Extensions
+
+- [Cloudinary Media Inspector](https://chrome.google.com/webstore/detail/cloudinary-media-inspecto/ehnkhkglbafecknplfmjklnnjimokpkg)
+Gives a quick overview of all loaded images (dimension, ratio, format, header, details)
+- [Piez](https://chrome.google.com/webstore/detail/piez/npbccjkjemgagjioahfccljgnlkdleod?hl=en)
+Piez displays optimizations made by Akamai Image Manager, Resource Optimizer, Push/Preconnect, and Script Manager.
+- [ModHeader](https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj?hl=en)
+Set additional headers. I use this to set the x-host when I test Cloudflare Workers in the browser.
+- [Web Vitals](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en#:~:text=Web%20Vitals&text=Web%20Vitals%20are%20quality%20signals,interactivity%20and%20layout%20shift%20metrics.)
+Shows the Web Vitals for the active page.
+- [CLS Visualizer](https://chrome.google.com/webstore/detail/cls-visualizer/jbbeihojggidiclbcneckhcblilapahn?hl=en)
+This plugin will highlight and visualize the Cumulative Layout Shift of the current page.
+
 #### Other Tools
 
 - [ProgUX – The best experience for every user](https://progux.org/)
@@ -267,7 +287,6 @@ They are like service workers in the cloud. With their help you can prototype yo
 - https://calibreapp.com/ - Monitor and audit web performance.
 - https://speedcurve.com/ - See how real people experience the speed of your website.
 - https://web.dev/measure/ - Uses Lighthouse
-- https://www.fastorslow.com/ - Global website speed profiler
 - https://treo.sh/ - Page Speed Monitoring Know the speed of your web pages and make them better.
 - https://tools.pingdom.com/ - Enter a URL to test the page load time, analyze it, and find bottlenecks.
 - https://developers.google.com/speed/pagespeed/insights/ - PageSpeed Insights analyzes the content of a web page, then generates suggestions to make that page faster.
@@ -283,7 +302,7 @@ They are like service workers in the cloud. With their help you can prototype yo
 - https://github.com/patrickhulce/cuzillion
 - https://pagespeed.compare/
 - https://googlechrome.github.io/lighthouse-ci/viewer/
-- https://github.com/cloudfour/lighthouse-parade - A Node.js command line tool that crawls a domain and gathers lighthouse performance data for every page. 
+- https://github.com/cloudfour/lighthouse-parade - A Node.js command line tool that crawls a domain and gathers lighthouse performance data for every page.
 - https://waterfaller.dev/ - Site Owners and marketers use Waterfaller to generate tasks for developers that boost page speed and Core Web Vital scores.
 - https://www.browserstack.com/speedlab - SpeedLab scores your website on important performance metrics so you can optimize your page speed to deliver the best user experience.
 - https://rviscomi.github.io/crux-dash-launcher/ - Launch directly into your own customized CrUX Dashboard
