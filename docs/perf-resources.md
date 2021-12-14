@@ -47,6 +47,7 @@
   - [Case studies](#case-studies)
   - [Open data sources](#open-data-sources)
   - [W3C Standards](#w3c-standards)
+  - [Checklists](#checklists)
   - [Other (needs sorting)](#other-needs-sorting)
 
 ## Stay up to date
@@ -102,6 +103,14 @@ Overview of performance related blogs
 - [Awesome WPO](https://github.com/davidsonfellipe/awesome-wpo) - A curated list of Web Performance Optimization. Everyone can contribute here!
 
 ## Core Web Vitals
+
+- [The developer's guide to Core Web Vitals](https://raygun.com/learn/the-developers-guide-to-core-web-vitals)
+- [Towards an animation smoothness metric](https://web.dev/smoothness/), Michal Mocny & Behdad Bakhshinategh & Jonathan Ross, [11/2021]
+- [An experimental responsiveness metric](https://web.dev/responsiveness/), Hongbo Song, [11/2021]
+- [CLS at BuzzFeed Part 1/3](https://tech.buzzfeed.com/improving-cumulative-layout-shift-at-buzzfeed-part-1-8b7ead2381dd)
+- [CLS at BuzzFeed Part 2/3](https://tech.buzzfeed.com/improving-cumulative-layout-shift-at-buzzfeed-part-2-2a846adeb097)
+- [CLS at BuzzFeed Part 3/3](https://tech.buzzfeed.com/improving-cumulative-layout-shift-at-buzzfeed-part-3-3a36240861e4)
+- [CWV will become a desktop ranking factor in February 2022](https://developers.google.com/search/blog/2021/11/bringing-page-experience-to-desktop)
 - [Send feedback to the Google Core Web Vitals Team](https://groups.google.com/g/web-vitals-feedback)
 - [Core Web Vitals Changelog](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/README.md)
 - [Case Study: Renault Group](https://web.dev/renault/), Thierry Coustillac & Antoine Bisch & Cédric Bazureau, 10/2021
@@ -164,7 +173,10 @@ Overview of performance related blogs
 
 ### General
 
+- [2021 Chrome Dev Summit: Web Performance 101 (Slides)](https://www.slideshare.net/tammyeverts/2021-chrome-dev-summit-web-performance-101?from_action=save), Tammy Everyts, [11/2021]
+- [Web Alamnac 2021: Web Performance](https://almanac.httparchive.org/en/2021/performance), Sia Karamalegos, [11/2021]
 - [My Challenge to the Web Performance Community](https://philipwalton.com/articles/my-challenge-to-the-web-performance-community/), Philip Walton, [10/2021]
+- [Personalizing Performance: Adapting Application in real time to member environments](https://www.linkedin.com/pulse/personalizing-performance-adapting-application-real-time-pasumarthy/), Nitin Pasumarthy, [09/2021]
 - [The metrics game](https://tech.bluesmoon.info/2021/08/the-metrics-game.html), Philip Tellis, [08/2021]
 - [Hobson's Browser](https://infrequently.org/2021/07/hobsons-browser/), Alex Rusell, [07/2021]
 - [Fast load times Techniques for improving site performance.](https://web.dev/fast/)
@@ -187,7 +199,9 @@ Overview of performance related blogs
 
 ### Network and Caching
 
-- https://k6.io/blog/comparing-best-open-source-load-testing-tools- [New HTTP standards for caching on the modern web](https://httptoolkit.tech/blog/status-targeted-caching-headers/), Tim Perry, [10/2021]
+- https://k6.io/blog/comparing-best-open-source-load-testing-tools
+- [Experiment with Priority Hints Locally](https://blr.design/blog/experiment-with-priority-hints/), Brian Louis Ramirez, [11/2021]
+- [New HTTP standards for caching on the modern web](https://httptoolkit.tech/blog/status-targeted-caching-headers/), Tim Perry, [10/2021]
 - [Coalescing Connections to Improve Network Privacy and Performance](https://blog.cloudflare.com/connection-coalescing-experiments/), Talha Paracha & Suleman Ahmad, [10/2021]
 - [Deploying HTTP/3 on Windows Server at Scale](https://techcommunity.microsoft.com/t5/networking-blog/deploying-http-3-on-windows-server-at-scale/ba-p/2839394), Nick Banks, [10/2021]
 - [How to win at CORS](https://jakearchibald.com/2021/cors/), Jake Archibald, [10/2021]
@@ -279,16 +293,21 @@ Overview of performance related blogs
 - [More than you ever wanted to know about font loading on the web](https://deploy-preview-15--upbeat-shirley-608546.netlify.app/posts/high-performance-web-font-loading/), Malte Ubl, [01/2021]
 - [The importance of `@font-face` source order when used with preload](https://nooshu.github.io/blog/2021/01/23/the-importance-of-font-face-source-order-when-used-with-preload/), Matt Hobbs, [01/2021]
 - [How to avoid layout shifts caused by web fonts](https://simonhearne.com/2021/layout-shifts-webfonts/), Simon Hearne, [01/2021]
+- [The Fastest Google Fonts](https://csswizardry.com/2020/05/the-fastest-google-fonts/), Harry Roberts, [05/2020]
+- [Should you self-host Google Fonts?](https://www.tunetheweb.com/blog/should-you-self-host-google-fonts/), Barry Pollard, [02/2020]
 - [Preloading Fonts and the Puzzle of Priorities](https://andydavies.me/blog/2019/02/12/preloading-fonts-and-the-puzzle-of-priorities/), Andy Davies, [02/2019]
 - [The font loading checklist](https://www.zachleat.com/web/font-checklist/), Zach Leatherman, [08/2018]
 
 ### Measure Performance
 
+- [Why Lighthouse Performance Score Doesn’t Work](https://calibreapp.com/blog/downsides-of-performance-score), Karolina Szczur, [12/2021]
+- [What's new in PageSpeed Insights](https://web.dev/whats-new-pagespeed-insights/), Addy Osmani & Elizabeth Sweeny, [11/2021]
 - [Why does Lighthouse lab data not match field data?](https://www.debugbear.com/blog/lighthouse-lab-data-not-matching-field-data), Matt Zeunert, [08/2021]
 - [How do Chrome extensions impact browser performance?](https://www.debugbear.com/blog/chrome-extension-performance-2021), Matt Zeunert, [07/2021]
 - [Measure the performance of a web application with Lighthouse CI in a GitLab CI pipeline](https://medium.com/tuimm/measure-performance-web-app-with-lighthouse-ci-in-a-gitlab-pipeline-dd292842e40d), Aurelio Merenda, [06/2021]
 - [Reducing variability in web performance metrics](https://www.debugbear.com/blog/web-performance-test-variability), debugbear, [11/2020]
 - [Why is my Lighthouse score different from PageSpeed Insights?](https://www.debugbear.com/blog/why-is-my-lighthouse-score-different-from-pagespeed-insights), debugbear, [08/2019]
+- [Network throttling: DevTools vs. Lighthouse vs. Netem](https://www.debugbear.com/blog/network-throttling-methods), debugbear, [03/2019]
 - [Benchmarking JavaScript Memory Usage](https://blog.webpagetest.org/posts/benchmarking-javascript-memory-usage/), Tim Kadlec, [06/2021]
 - [Lighthouse performance scoring - How Lighthouse calculates your overall Performance score](https://web.dev/performance-scoring/), [06/2021]
 - [How Real User Monitoring will improve GOV.UK for everyone](https://insidegovuk.blog.gov.uk/2021/06/16/how-real-user-monitoring-will-improve-gov-uk-for-everyone/), Matt Hobbs, [06/2021]
@@ -339,6 +358,7 @@ Overview of performance related blogs
 
 ### Third-Party Services
 
+- [Web Almanac 2021: Third Parties](https://almanac.httparchive.org/en/2021/third-parties), Barry Pollard, [11/2021]
 - [Best practices for using third-party embeds](https://web.dev/embed-best-practices/), Leena Sohoni & Katie Hempenius & Addy Osmani, [10/2021]
 - [The Impact of Third-Party Scripts on the Facebook Outage](https://www.akamai.com/blog/news/the-impact-of-third-party-scripts-on-the-facebook-outage), Kunjal Botadra, [10/2021]
 - [Loading Third-Party JavaScript](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript), Addy Osmani & Arthur Evans
@@ -350,6 +370,7 @@ Overview of performance related blogs
 - [The Case Against Anti-Flicker Snippets](https://andydavies.me/blog/2020/11/16/the-case-against-anti-flicker-snippets/), Andy Davies, [11/2020]
 - [Reducing the Site-Speed Impact of Third-Party Tags](https://andydavies.me/blog/2020/10/02/reducing-the-site-speed-impact-of-third-party-tags/), Andy Davies, [10/2020]
 - [Improve web performance lazy loading reCaptcha](https://antonioufano.com/articles/improve-web-performance-lazy-loading-recaptcha/), Antonio Ufano, [06/2020]
+- [Adding controls to Google Tag Manager](https://www.tunetheweb.com/blog/adding-controls-to-google-tag-manager/), Barry Pollard, [09/2019]
 - [Self-Host Your Static Assets](https://csswizardry.com/2019/05/self-host-your-static-assets/), Harry Roberts, [05/2019]
 - [How we shaved 1.7 seconds off casper.com by self-hosting Optimizely](https://medium.com/caspertechteam/we-shaved-1-7-seconds-off-casper-com-by-self-hosting-optimizely-2704bcbff8ec), Kyle Rush, [08/2018]
 - [Changing Our Approach to Anti-tracking](https://blog.mozilla.org/futurereleases/2018/08/30/changing-our-approach-to-anti-tracking/), Nick Nguyen, [08/2018]
@@ -390,6 +411,7 @@ Overview of performance related blogs
 
 ### Javascript and Render Performance
 
+- [Nuxt SSR Optimizing Tips]{https://vueschool.io/articles/vuejs-tutorials/nuxt-ssr-optimizing-tips/}, Filip Rakowski
 - [GPU accelerated JavaScript](https://gpu.rocks/#/)
 - [Introducing Partytown �: Run Third-Party Scripts From a Web Worker](https://dev.to/adamdbradley/introducing-partytown-run-third-party-scripts-from-a-web-worker-2cnp), Adam Bradly, 10/2021
 - [Astro: Astro is a fresh but familiar approach to building websites. Astro combines decades of proven performance best practices with the DX improvements of the component-oriented era. Use your favorite JavaScript framework and automatically ship the bare-minimum amount of JavaScript—by default.](https://docs.astro.build/getting-started/)
@@ -628,6 +650,7 @@ This is a really good talk about how humans perceive performance. Eli shares a l
 
 ### Development
 
+- [Harry Roberts - Get Your "head" Straight](https://www.youtube.com/watch?v=MHyAOZ45vnU), Harry Roberts, 11/2021
 - [Web Performance Tuning with browser APIs](https://www.youtube.com/watch?v=ALN1v_sBe2g), Yaser Adel Mehraban, [06/2021]
 - [Transitioning to modern JavaScript](https://www.youtube.com/watch?v=cLxNdLK--yI) ([Article](https://web.dev/publish-modern-javascript/)), Houssein Djirdeh, Jason Miller, Chrome Dev Summit 2020, 12/2020
 - [When JavaScript Bytes](https://www.youtube.com/watch?v=JvJ0v5OohNg) ([Slides](https://noti.st/tkadlec/MC0Bvy/when-javascript-bytes)), Tim Kadlec, 11/2019
@@ -749,6 +772,7 @@ Learn what influence PWA have on business metrics.
 
 ## Case studies
 
+- [Case Study: Improving The Performance Of Wix Websites](https://www.smashingmagazine.com/2021/11/improving-performance-wix-websites-case-study/), Dan Shapir, [11/2021]
 - [LinkedIn: Personalizing Performance: Adapting Application in real time to member environments](https://www.linkedin.com/pulse/personalizing-performance-adapting-application-real-time-pasumarthy/), Nitin Pasumarthy, [09/2021]
 - [How committing to Core Web Vitals increased Netzwelt's advertising revenues by 18%](https://web.dev/netzwelt/), Martin Schierle, [07/2021]
 - [Improving Cumulative Layout Shift at Telegraph Media Group](https://web.dev/telegraph/), Chris Boakes, [06/2021]
@@ -777,6 +801,7 @@ Learn what influence PWA have on business metrics.
 
 ## Open data sources
 
+- [HTTP Archive Report: State of Images](https://httparchive.org/reports/state-of-images)
 - [What do Lighthouse Scores look like across the web?](https://www.tunetheweb.com/blog/what-do-lighthouse-scores-look-like-across-the-web/), Barry Pollard, [04/2021]
 - [Web Almanac 2020 - HTTP Archive's annual state of the web report](https://almanac.httparchive.org/en/2020/), [12/2020]
 - [Web Worldwide](https://www.webworldwide.io/)
@@ -803,6 +828,12 @@ The [Web Performance Working Group](https://www.w3.org/webperf/) is providing me
 The [Performance Timing Primer](https://w3c.github.io/perf-timing-primer/) gives a good overview on what the Web Performance Group is working on.
 
 [All standards and drafts from the Performance Working Group](https://www.w3.org/TR/?tag=performance)
+
+## Checklists
+
+- [Web Quality Assurance Checklist](https://checklists.opquast.com/web-quality-assurance/)
+- [Web Sustainability Checklist (German)](https://nachhaltiges-webdesign.jetzt/)
+- [Smashing Magazine: Front-End Performance Checklist 2021](https://www.smashingmagazine.com/2021/01/front-end-performance-2021-free-pdf-checklist/)
 
 ## Other (needs sorting)
 
@@ -834,4 +865,4 @@ The [Performance Timing Primer](https://w3c.github.io/perf-timing-primer/) gives
 - <https://github.com/Nooshu/wpt-jq-data-scripts>
 - <https://octo.github.com/projects/flat-data> TODO: Explore how to use it to gather bulk data
 - http://s3.amazonaws.com/alexa-static/top-1m.csv.zip
-- https://github.com/fabkrum/web-performance-resources/commit/f58fb30dff8844096991be0eb3ca4559edb3d1fb
+- https://github.com/fabkrum/web-performance-resources/commit/68d2420d3146a43b0d98b5060dc12d1f1c849189

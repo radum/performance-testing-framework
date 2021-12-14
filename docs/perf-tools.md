@@ -47,6 +47,9 @@ The Request Map Generator is the go to place to understand what 3rd party tools 
 
 #### Lighthouse & CrUX & Core Web Vitals
 
+- [Lighthouse network throttling simulation](https://www.debugbear.com/lighthouse-simulation) This tool runs a Lighthouse performance test at a range of different network speeds. This shows how bandwidth and round-trip latency impact site performance metrics.
+- [Project Lantern](https://docs.google.com/document/d/1pHEjtQjeycMoFOtheLfFjqzggY8VvNaIRfjC7IgNLq0/edit#) Lantern set out to remove Lighthouse's dependency on network throttling and reduce the required time to compute results (previously ~40 seconds) to the same level as that of PageSpeed Insights (~16 seconds).
+- [Lighthouse network throttling simulation](https://www.debugbear.com/lighthouse-simulation) This tool runs a Lighthouse performance test at a range of different network speeds. It shows how bandwidth and round-trip latency impact site performance metrics.
 - [Multihouse](https://github.com/samdutton/multihouse)
 Multiple Lighthouse runs for multiple URLs
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
@@ -93,6 +96,10 @@ Upload an image and compare the original with different compressed version to fi
 Optimizes images and generate the HTML for you.
 - [See How Images Affect Your Page Speed](https://pageweight.imgix.com)
 - [Image Analyser](https://webspeedtest.cloudinary.com/)
+Image analysis tool. This tool gives you insight about how you can optimise your images to gain a better web performance. This tool is also integrated within webpagetest.org.
+- [Cloudflare: Image Optimization Test](https://images.cloudflare.com/)
+Image analysis tool. This tool gives you insight about how you can optimise your images to gain a better web performance.
+- [Cloudinary: Image Analyser](https://webspeedtest.cloudinary.com/)
 Image analysis tool. This tool gives you insight about how you can optimise your images to gain a better web performance. This tool is also integrated within webpagetest.org.
 - [Responsive Image Breakpoints Generator v2.0](https://responsivebreakpoints.com/)
 Easily generate the optimal responsive image dimensions
