@@ -47,6 +47,7 @@ The Request Map Generator is the go to place to understand what 3rd party tools 
 
 #### Lighthouse & CrUX & Core Web Vitals
 
+- [Calibre Core web vitals checker](https://calibreapp.com/tools/core-web-vitals-checker) CWV summary is generated based on Google’s Chrome User Experience Report (CrUX)
 - [Lighthouse network throttling simulation](https://www.debugbear.com/lighthouse-simulation) This tool runs a Lighthouse performance test at a range of different network speeds. This shows how bandwidth and round-trip latency impact site performance metrics.
 - [Project Lantern](https://docs.google.com/document/d/1pHEjtQjeycMoFOtheLfFjqzggY8VvNaIRfjC7IgNLq0/edit#) Lantern set out to remove Lighthouse's dependency on network throttling and reduce the required time to compute results (previously ~40 seconds) to the same level as that of PageSpeed Insights (~16 seconds).
 - [Lighthouse network throttling simulation](https://www.debugbear.com/lighthouse-simulation) This tool runs a Lighthouse performance test at a range of different network speeds. It shows how bandwidth and round-trip latency impact site performance metrics.

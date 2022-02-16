@@ -104,6 +104,9 @@ Overview of performance related blogs
 
 ## Core Web Vitals
 
+- [Hands On with the new Responsiveness Metrics](https://calendar.perfplanet.com/2021/hands-on-with-the-new-responsiveness-metrics/), Hongbo Song, [12/2021]
+- [Have Core Web Vitals made the web faster?](https://calendar.perfplanet.com/2021/have-core-web-vitals-made-the-web-faster/), Barry Pollard, [12/2021]
+- [Improving Core Web Vitals, A Smashing Magazine Case Study](https://www.smashingmagazine.com/2021/12/core-web-vitals-case-study-smashing-magazine/), Barry Pollard, [12/2021]
 - [The developer's guide to Core Web Vitals](https://raygun.com/learn/the-developers-guide-to-core-web-vitals)
 - [Towards an animation smoothness metric](https://web.dev/smoothness/), Michal Mocny & Behdad Bakhshinategh & Jonathan Ross, [11/2021]
 - [An experimental responsiveness metric](https://web.dev/responsiveness/), Hongbo Song, [11/2021]
@@ -173,6 +176,8 @@ Overview of performance related blogs
 
 ### General
 
+- [Browser Cookie Status](https://www.cookiestatus.com/), Simo Ahava
+- [Should you use a carousel on your website?](https://www.pragm.co/post/should-you-use-a-carousel-on-your-website), Myriam Jessier, [12/2021]
 - [2021 Chrome Dev Summit: Web Performance 101 (Slides)](https://www.slideshare.net/tammyeverts/2021-chrome-dev-summit-web-performance-101?from_action=save), Tammy Everyts, [11/2021]
 - [Web Alamnac 2021: Web Performance](https://almanac.httparchive.org/en/2021/performance), Sia Karamalegos, [11/2021]
 - [My Challenge to the Web Performance Community](https://philipwalton.com/articles/my-challenge-to-the-web-performance-community/), Philip Walton, [10/2021]
@@ -300,6 +305,7 @@ Overview of performance related blogs
 
 ### Measure Performance
 
+- [Fixing Performance Regressions Before they Happen](https://netflixtechblog.com/fixing-performance-regressions-before-they-happen-eab2602b86fe), Netflix, [01/2022]
 - [Why Lighthouse Performance Score Doesn’t Work](https://calibreapp.com/blog/downsides-of-performance-score), Karolina Szczur, [12/2021]
 - [What's new in PageSpeed Insights](https://web.dev/whats-new-pagespeed-insights/), Addy Osmani & Elizabeth Sweeny, [11/2021]
 - [Why does Lighthouse lab data not match field data?](https://www.debugbear.com/blog/lighthouse-lab-data-not-matching-field-data), Matt Zeunert, [08/2021]
@@ -358,6 +364,7 @@ Overview of performance related blogs
 
 ### Third-Party Services
 
+- [How anti-flicker snippets from A/B testing tools impact site speed](https://www.debugbear.com/blog/ab-testing-anti-flicker-body-hiding), Matt Zeunert (DebugBear), [02/2022]
 - [Web Almanac 2021: Third Parties](https://almanac.httparchive.org/en/2021/third-parties), Barry Pollard, [11/2021]
 - [Best practices for using third-party embeds](https://web.dev/embed-best-practices/), Leena Sohoni & Katie Hempenius & Addy Osmani, [10/2021]
 - [The Impact of Third-Party Scripts on the Facebook Outage](https://www.akamai.com/blog/news/the-impact-of-third-party-scripts-on-the-facebook-outage), Kunjal Botadra, [10/2021]
@@ -411,7 +418,9 @@ Overview of performance related blogs
 
 ### Javascript and Render Performance
 
-- [Nuxt SSR Optimizing Tips]{https://vueschool.io/articles/vuejs-tutorials/nuxt-ssr-optimizing-tips/}, Filip Rakowski
+- [Improve how you architect webapps](https://www.patterns.dev/), Addy Osmani & Lydia Hallie
+- [Have Single-Page Apps Ruined the Web? | Transitional Apps](https://www.youtube.com/watch?v=860d8usGC0o), Rich Harris, [12/2021]
+- [Nuxt SSR Optimizing Tips](https://vueschool.io/articles/vuejs-tutorials/nuxt-ssr-optimizing-tips/), Filip Rakowski
 - [GPU accelerated JavaScript](https://gpu.rocks/#/)
 - [Introducing Partytown �: Run Third-Party Scripts From a Web Worker](https://dev.to/adamdbradley/introducing-partytown-run-third-party-scripts-from-a-web-worker-2cnp), Adam Bradly, 10/2021
 - [Astro: Astro is a fresh but familiar approach to building websites. Astro combines decades of proven performance best practices with the DX improvements of the component-oriented era. Use your favorite JavaScript framework and automatically ship the bare-minimum amount of JavaScript—by default.](https://docs.astro.build/getting-started/)
@@ -497,6 +506,7 @@ Overview of performance related blogs
 
 ### Energy Consumption and sustainability
 
+- [Website performance and the planet](https://blog.webpagetest.org/posts/website-performance-and-the-planet/), Fershad Irani, [01/2022]
 - [Green Energy Efficient Progressive Web Apps](https://devblogs.microsoft.com/sustainable-software/green-energy-efficient-progressive-web-apps/), David Rousset, [11, 2020]
 
 ## Online courses
@@ -865,4 +875,4 @@ The [Performance Timing Primer](https://w3c.github.io/perf-timing-primer/) gives
 - <https://github.com/Nooshu/wpt-jq-data-scripts>
 - <https://octo.github.com/projects/flat-data> TODO: Explore how to use it to gather bulk data
 - http://s3.amazonaws.com/alexa-static/top-1m.csv.zip
-- https://github.com/fabkrum/web-performance-resources/commit/68d2420d3146a43b0d98b5060dc12d1f1c849189
+- https://github.com/fabkrum/web-performance-resources/commit/67f75cd4b0d93d01fb867ceed42337562ef20629
