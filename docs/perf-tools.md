@@ -47,6 +47,7 @@ The Request Map Generator is the go to place to understand what 3rd party tools 
 
 #### Lighthouse & CrUX & Core Web Vitals
 
+- [Unlighthouse](https://github.com/harlan-zw/unlighthouse) Scan your entire website with Google Lighthouse️ - in 2 minutes
 - [Calibre Core web vitals checker](https://calibreapp.com/tools/core-web-vitals-checker) CWV summary is generated based on Google’s Chrome User Experience Report (CrUX)
 - [Lighthouse network throttling simulation](https://www.debugbear.com/lighthouse-simulation) This tool runs a Lighthouse performance test at a range of different network speeds. This shows how bandwidth and round-trip latency impact site performance metrics.
 - [Project Lantern](https://docs.google.com/document/d/1pHEjtQjeycMoFOtheLfFjqzggY8VvNaIRfjC7IgNLq0/edit#) Lantern set out to remove Lighthouse's dependency on network throttling and reduce the required time to compute results (previously ~40 seconds) to the same level as that of PageSpeed Insights (~16 seconds).
@@ -135,6 +136,7 @@ Understand the technical building blocks of a website.
 
 #### Development Tools
 
+- [Resource Hint Validator by DebugBear](https://www.debugbear.com/resource-hint-validator)
 - [HTML Size Analyzer by DebugBear](https://www.debugbear.com/html-size-analyzer)
 - [PurifyCSS Online](https://purifycss.online/)
 Insert your website URL below and find out by how much of your CSS file size can be reduced
@@ -292,6 +294,11 @@ They are like service workers in the cloud. With their help you can prototype yo
 
 ## Needs sorting
 
+- https://webperf.tools/
+- https://requestmap.pages.dev/
+- https://requestmap.webperf.tools/ - Request map generator, compiles a chart of all requests and their dependencies.
+- https://requestmap.herokuapp.com/
+- https://github.com/vigneshshanmugam/rum-profiler
 - https://calibreapp.com/ - Monitor and audit web performance.
 - https://speedcurve.com/ - See how real people experience the speed of your website.
 - https://web.dev/measure/ - Uses Lighthouse
@@ -299,13 +306,11 @@ They are like service workers in the cloud. With their help you can prototype yo
 - https://tools.pingdom.com/ - Enter a URL to test the page load time, analyze it, and find bottlenecks.
 - https://developers.google.com/speed/pagespeed/insights/ - PageSpeed Insights analyzes the content of a web page, then generates suggestions to make that page faster.
 - https://gtmetrix.com/ - See how your site performs, reveal why it's slow and discover optimization opportunities.
-- https://requestmap.webperf.tools/ - Request map generator, compiles a chart of all requests and their dependencies.
 - https://crux.run/ - Instantaneous Historical Chrome User Experience Reports
 - https://github.com/Zizzamia/perfume.js - Web performance monitoring library which reports field data like FP/FCP, LCP, FID back to your favorite analytics tool.
 - https://github.com/zachleat/performance-leaderboard - A plugin to run Lighthouse against a set of urls to see which site is the fastest.
 - https://github.com/treosh/lighthouse-ci-action
 - https://github.com/projectwallace/css-diff-action
-- https://requestmap.herokuapp.com/
 - https://github.com/addyosmani/puppeteer-webperf
 - https://github.com/patrickhulce/cuzillion
 - https://pagespeed.compare/

@@ -13,7 +13,7 @@ docker run \
     --shm-size=2g \
     --rm \
     -v "$(pwd):/sitespeed.io" \
-    sitespeedio/sitespeed.io:17.8.1-plus1 \
+    sitespeedio/sitespeed.io:23.5.0-plus1 \
     -e REPLAY=true \
     -e LATENCY=100 \
     -n 3 \
@@ -53,7 +53,7 @@ docker run \
     --shm-size=2g \
     --rm \
     -v "$(pwd):/sitespeed.io" \
-    sitespeedio/sitespeed.io:17.8.1-plus1 \
+    sitespeedio/sitespeed.io:23.5.0-plus1 \
     -e REPLAY=true \
     -e LATENCY=100 \
     -n 3 \

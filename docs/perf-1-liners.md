@@ -78,3 +78,13 @@ In Google Chrome go to settings and add a custom search engine:
 Search engine: CrUX
 Keyword: crux
 Query URL: https://datastudio.google.com/c/u/0/reporting/bbc5698d-57bb-4969-9e07-68810b9fa348/page/keDQB?params=%7B%22origin%22:%22%s%22%7D
+
+### Check whether your browser reports data to CrUX
+
+```
+chrome://ukm
+
+also --enable-logging=stderr will log out network requests.. (i forget if you need --v=1 or not.. but you'll see the pings to the UKM reporting endpoint.
+
+~/Paul Irish
+```

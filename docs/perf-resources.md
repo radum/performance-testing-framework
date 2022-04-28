@@ -104,8 +104,10 @@ Overview of performance related blogs
 
 ## Core Web Vitals
 
+- [How CSS opacity animations can delay the Largest Contentful Paint](https://www.debugbear.com/blog/opacity-animation-poor-lcp), DebugBear, [03/2022]
 - [Hands On with the new Responsiveness Metrics](https://calendar.perfplanet.com/2021/hands-on-with-the-new-responsiveness-metrics/), Hongbo Song, [12/2021]
 - [Have Core Web Vitals made the web faster?](https://calendar.perfplanet.com/2021/have-core-web-vitals-made-the-web-faster/), Barry Pollard, [12/2021]
+- [How To Benchmark And Improve Web Vitals With Real User Metrics](https://www.smashingmagazine.com/2022/02/benchmark-improve-web-vitals-real-user-metrics/), Átila Fassina, 02/2022
 - [Improving Core Web Vitals, A Smashing Magazine Case Study](https://www.smashingmagazine.com/2021/12/core-web-vitals-case-study-smashing-magazine/), Barry Pollard, [12/2021]
 - [The developer's guide to Core Web Vitals](https://raygun.com/learn/the-developers-guide-to-core-web-vitals)
 - [Towards an animation smoothness metric](https://web.dev/smoothness/), Michal Mocny & Behdad Bakhshinategh & Jonathan Ross, [11/2021]
@@ -204,6 +206,7 @@ Overview of performance related blogs
 
 ### Network and Caching
 
+- [Bringing instant page-loads to the browser through speculative prerendering](https://web.dev/speculative-prerendering/#in-browser-speculation-rules-for-prefetch-and-prerender), Leena Sohoni & Addy Osmani, 02/2022
 - https://k6.io/blog/comparing-best-open-source-load-testing-tools
 - [Experiment with Priority Hints Locally](https://blr.design/blog/experiment-with-priority-hints/), Brian Louis Ramirez, [11/2021]
 - [New HTTP standards for caching on the modern web](https://httptoolkit.tech/blog/status-targeted-caching-headers/), Tim Perry, [10/2021]
@@ -418,6 +421,7 @@ Overview of performance related blogs
 
 ### Javascript and Render Performance
 
+- [From Static to Interactive: Why Resumability is the Best Alternative to Hydration](https://www.builder.io/blog/from-static-to-interactive-why-resumability-is-the-best-alternative-to-hydration), MIŠKO HEVERY, [03/2022]
 - [Improve how you architect webapps](https://www.patterns.dev/), Addy Osmani & Lydia Hallie
 - [Have Single-Page Apps Ruined the Web? | Transitional Apps](https://www.youtube.com/watch?v=860d8usGC0o), Rich Harris, [12/2021]
 - [Nuxt SSR Optimizing Tips](https://vueschool.io/articles/vuejs-tutorials/nuxt-ssr-optimizing-tips/), Filip Rakowski
@@ -592,11 +596,13 @@ This is a great free introduction into web performance. Ilya Grigorik from Googl
 - [Cheating the UX when there is nothing more to optimize](https://vimeo.com/251825705) ([Slides](https://speakerdeck.com/stephaniewalter/cheating-the-ux-when-there-is-nothing-more-to-optimise)), Stephanie Walter, 01/2018
 - O’Reilly Safaribooksonline: [Perceived Performance: The Only Kind that Really Matters](https://www.safaribooksonline.com/library/view/perceived-performance-the/9781492029953/) ([Slides](http://assets.eli.wtf/talks/perceived-perf-talk/)), Eli Fitch, 11/2017 (34$ / monthly subscription)
 This is a really good talk about how humans perceive performance. Eli shares a lot of good tips and tricks how you can improve the perceived performance.
+- [Perceived Performance: The Only Kind that Really Matters](https://www.youtube.com/watch?v=USH4iPQ44LQ) ([Slides](http://assets.eli.wtf/talks/perceived-perf-perfmatters-2018/#/)), Eli Fitch, 11/2017
 - [The Illusion of speed - improving the perceived speed of websites](https://www.youtube.com/watch?v=g3P7Gy_2wOo), Paul Bakaus, 08/2017
 - [Deconstructing Performance](https://vimeo.com/184659742), Denys Mishunov, 01/2016The content of this talk is similar to Eli Fitch’s talk, but less technical.
 
 ### Network and Caching
 
+- [Browser Debugging Tutorial - NetLogging](https://www.youtube.com/watch?v=ACvjQNl01MA)
 - [HTTP Caching Tests](https://cache-tests.fyi/), Mark Nottingham
 - [List of YouTube videos about QUIC/HTTP3](https://www.youtube.com/results?search_query=robin+marx+quic), Robin Marx
 - [Data-s(h)aver strategies](https://youtu.be/X0BbSvSbwD0), Tim Vereecke, 11/2019
@@ -875,4 +881,4 @@ The [Performance Timing Primer](https://w3c.github.io/perf-timing-primer/) gives
 - <https://github.com/Nooshu/wpt-jq-data-scripts>
 - <https://octo.github.com/projects/flat-data> TODO: Explore how to use it to gather bulk data
 - http://s3.amazonaws.com/alexa-static/top-1m.csv.zip
-- https://github.com/fabkrum/web-performance-resources/commit/67f75cd4b0d93d01fb867ceed42337562ef20629
+- https://github.com/fabkrum/web-performance-resources/commit/6a11950db291167d3e2f1bdcbbcbe05fbb0fdf13

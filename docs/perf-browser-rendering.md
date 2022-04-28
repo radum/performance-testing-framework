@@ -1,5 +1,19 @@
 # Browser rendering steps
 
+- [Browser rendering steps](#browser-rendering-steps)
+  - [The Browser](#the-browser)
+    - [Basic Parser Rules](#basic-parser-rules)
+      - [Preload Scanner](#preload-scanner)
+    - [Browser Events](#browser-events)
+      - [DOM Content Loaded](#dom-content-loaded)
+      - [Load](#load)
+    - [Rendering Magic](#rendering-magic)
+    - [Late-Discovered Resources](#late-discovered-resources)
+  - [Network](#network)
+    - [In-browser priotitization](#in-browser-priotitization)
+      - [HTTP/1.x Prioritization](#http1x-prioritization)
+    - [Other Browser gotchas](#other-browser-gotchas)
+
 *MISSING*
 
 - [ ] Browser events complete list
@@ -7,6 +21,13 @@
 - [ ] Example on how the parser works on an html file
 - [ ] In-browser priotitization
 - [ ] Most of it documented here https://www.youtube.com/watch?v=ct5MvtmL1NM&list=WL
+
+Inside look at modern web browser
+
+- https://developer.chrome.com/blog/inside-browser-part1/
+- https://developer.chrome.com/blog/inside-browser-part2/
+- https://developer.chrome.com/blog/inside-browser-part3/
+- https://developer.chrome.com/blog/inside-browser-part4/
 
 ## The Browser
 

@@ -19,7 +19,7 @@ async function handleRequest(request) {
 	// when overrideHost is used in a WPT script, WPT sets x-host to original host i.e. site we want to proxy
 	// store the value of x-host
 	let xhost = request.headers.get('x-host');
-	// xhost = 'www.example.com';
+	// xhost = site;
 
 	// If the `x-host` header is missing, abort and tell us
 	if (!xhost) {
