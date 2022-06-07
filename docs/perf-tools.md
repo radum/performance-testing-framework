@@ -90,6 +90,8 @@ The following tool allows you to enter arbitrary markup which causes layout shif
 
 #### Images & Video
 
+- [Daltons](https://github.com/cleverage/daltons)
+daltons is a command-line tool that computes optimal image widths to put in srcset attributes of responsive images.
 - [AVPress](https://avpress.zaps.dev/)
 Compress & resize videos in the browser thanks to WebAssembly and FFMPEG.WASM.
 - [Squoosh](https://squoosh.app)
@@ -180,6 +182,8 @@ A Chrome Devtools extension that helps you explore the distribution of DOM nodes
 
 #### Network Tools
 
+- [H2Vis](https://github.com/DaanDeMeyer/h2vis)
+H2Vis is an application that visualizes the inner workings of HTTP/2.
 - [Fast or Slow](https://www.fastorslow.com/)
 Global Website Speed Profiler
 - [https://httpstatus.io/](https://httpstatus.io/)
@@ -229,6 +233,8 @@ If you use font-display: swap this tool is great to make sure the fallback font 
 Your web font utility belt. It can subset web fonts. It can show you what unicode-ranges are used on a web site (optionally per font-family). It can also subset web fonts automatically using the unicode-ranges it found.
 - [Wakamaifondue](https://wakamaifondue.com)
 Tool to inspect local font files
+- [FontDrop!](https://fontdrop.info/)
+Simple and easy way to view the content of font files.
 - [Online Font Converter](https://onlinefontconverter.com/)
 A good tool to create woff2 fonts
 - [Font Subsetter](https://everythingfonts.com/subsetter)
@@ -294,6 +300,7 @@ They are like service workers in the cloud. With their help you can prototype yo
 
 ## Needs sorting
 
+- https://github.com/nucliweb/webperf-snippets - A curated list of snippets to get Web Performance metrics to use in the browser console
 - https://webperf.tools/
 - https://requestmap.pages.dev/
 - https://requestmap.webperf.tools/ - Request map generator, compiles a chart of all requests and their dependencies.

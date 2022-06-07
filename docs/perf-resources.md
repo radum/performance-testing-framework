@@ -178,6 +178,8 @@ Overview of performance related blogs
 
 ### General
 
+- [A Management Maturity Model for Performance](https://infrequently.org/2022/05/performance-management-maturity/), Alex Russell, [05/2022]
+- [Understanding the performance impact of anti-flicker snippets](https://www.speedcurve.com/blog/web-performance-anti-flicker-snippets/), Andy Davies, [04/2022]
 - [Browser Cookie Status](https://www.cookiestatus.com/), Simo Ahava
 - [Should you use a carousel on your website?](https://www.pragm.co/post/should-you-use-a-carousel-on-your-website), Myriam Jessier, [12/2021]
 - [2021 Chrome Dev Summit: Web Performance 101 (Slides)](https://www.slideshare.net/tammyeverts/2021-chrome-dev-summit-web-performance-101?from_action=save), Tammy Everyts, [11/2021]
@@ -602,6 +604,7 @@ This is a really good talk about how humans perceive performance. Eli shares a l
 
 ### Network and Caching
 
+- [Patrick Meenan | HTTP/2 priorities](https://www.youtube.com/watch?v=sgjxuhFQktE)
 - [Browser Debugging Tutorial - NetLogging](https://www.youtube.com/watch?v=ACvjQNl01MA)
 - [HTTP Caching Tests](https://cache-tests.fyi/), Mark Nottingham
 - [List of YouTube videos about QUIC/HTTP3](https://www.youtube.com/results?search_query=robin+marx+quic), Robin Marx
@@ -853,6 +856,8 @@ The [Performance Timing Primer](https://w3c.github.io/perf-timing-primer/) gives
 
 ## Other (needs sorting)
 
+- <https://www.slideshare.net/nicjansma/measuring-the-performance-of-single-page-applications>
+- <https://www.slideshare.net/bluesmoon/beyond-page-level-metrics>
 - <https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf>
 - <https://csswizardry.com/2020/04/real-world-effectiveness-of-brotli/>
 - <https://css-tricks.com/tools-for-auditing-css/>
