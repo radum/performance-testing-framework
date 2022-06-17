@@ -47,6 +47,7 @@ The Request Map Generator is the go to place to understand what 3rd party tools 
 
 #### Lighthouse & CrUX & Core Web Vitals
 
+- [Core Web Vitals Optimizer (BETA)](https://github.com/fabkrum/core-web-vitals-optimizer) https://fabkrum.github.io/core-web-vitals-optimizer/
 - [Unlighthouse](https://github.com/harlan-zw/unlighthouse) Scan your entire website with Google Lighthouse️ - in 2 minutes
 - [Calibre Core web vitals checker](https://calibreapp.com/tools/core-web-vitals-checker) CWV summary is generated based on Google’s Chrome User Experience Report (CrUX)
 - [Lighthouse network throttling simulation](https://www.debugbear.com/lighthouse-simulation) This tool runs a Lighthouse performance test at a range of different network speeds. This shows how bandwidth and round-trip latency impact site performance metrics.
