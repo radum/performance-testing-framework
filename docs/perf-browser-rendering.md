@@ -5,6 +5,7 @@
     - [Basic Parser Rules](#basic-parser-rules)
       - [Preload Scanner](#preload-scanner)
     - [Browser Events](#browser-events)
+      - [The end](#the-end)
       - [DOM Content Loaded](#dom-content-loaded)
       - [Load](#load)
     - [Rendering Magic](#rendering-magic)
@@ -91,6 +92,19 @@ In the example above, the browser reaches script.js loads and executes, before i
 The next script script2.js will be seen by the preload scanner and it will start fetching before script.js will finish executing.
 
 ### Browser Events
+
+#### The end
+
+What happens at the end of parsing the html
+
+1. Document's readyState becomes `interactive`.
+2. Wait for stylesheets to load that were parser-inserted & their media matches.
+3. Wait for & execute all `defer` scripts in order.
+4. `DOMContentLoaded` event.
+5. Wait for pretty much everything that triggered a request.
+6. Document's readyState becomes `complete`.
+7. `load` event (images have loaded and everything else).
+8. `pageshow` event.
 
 #### DOM Content Loaded
 

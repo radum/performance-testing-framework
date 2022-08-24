@@ -104,6 +104,7 @@ Overview of performance related blogs
 
 ## Core Web Vitals
 
+- [A New Measure of Responsiveness](https://noti.st/anniesullie/ecTDnH/a-new-measure-of-responsiveness), Annie Sullivan, [06/2022]
 - [How CSS opacity animations can delay the Largest Contentful Paint](https://www.debugbear.com/blog/opacity-animation-poor-lcp), DebugBear, [03/2022]
 - [Hands On with the new Responsiveness Metrics](https://calendar.perfplanet.com/2021/hands-on-with-the-new-responsiveness-metrics/), Hongbo Song, [12/2021]
 - [Have Core Web Vitals made the web faster?](https://calendar.perfplanet.com/2021/have-core-web-vitals-made-the-web-faster/), Barry Pollard, [12/2021]
@@ -178,6 +179,7 @@ Overview of performance related blogs
 
 ### General
 
+- [Lazy Load '22 - Performance Mistakes - An HTTP Archive Deep Dive](https://www.slideshare.net/PaulCalvano/lazy-load-22-performance-mistakes-an-http-archive-deep-dive), Paul Calvano, [06/2022]
 - [A Management Maturity Model for Performance](https://infrequently.org/2022/05/performance-management-maturity/), Alex Russell, [05/2022]
 - [Understanding the performance impact of anti-flicker snippets](https://www.speedcurve.com/blog/web-performance-anti-flicker-snippets/), Andy Davies, [04/2022]
 - [Browser Cookie Status](https://www.cookiestatus.com/), Simo Ahava
@@ -208,6 +210,7 @@ Overview of performance related blogs
 
 ### Network and Caching
 
+- [Caching Header Best Practices](https://simonhearne.com/2022/caching-header-best-practices/), Simon Hearne, [01/2022]
 - [Bringing instant page-loads to the browser through speculative prerendering](https://web.dev/speculative-prerendering/#in-browser-speculation-rules-for-prefetch-and-prerender), Leena Sohoni & Addy Osmani, 02/2022
 - https://k6.io/blog/comparing-best-open-source-load-testing-tools
 - [Experiment with Priority Hints Locally](https://blr.design/blog/experiment-with-priority-hints/), Brian Louis Ramirez, [11/2021]
@@ -310,6 +313,8 @@ Overview of performance related blogs
 
 ### Measure Performance
 
+- [Performance regression tests at Microsoft Security](https://devblogs.microsoft.com/premier-developer/performance-regression-tests-at-microsoft-security/), Maor Frankel, [05/2022]
+- [How to select a device configuration for site speed tests](https://www.debugbear.com/blog/site-speed-device-configuration), debugbear, [06/2022]
 - [Fixing Performance Regressions Before they Happen](https://netflixtechblog.com/fixing-performance-regressions-before-they-happen-eab2602b86fe), Netflix, [01/2022]
 - [Why Lighthouse Performance Score Doesn’t Work](https://calibreapp.com/blog/downsides-of-performance-score), Karolina Szczur, [12/2021]
 - [What's new in PageSpeed Insights](https://web.dev/whats-new-pagespeed-insights/), Addy Osmani & Elizabeth Sweeny, [11/2021]
@@ -369,6 +374,7 @@ Overview of performance related blogs
 
 ### Third-Party Services
 
+- [Can browsers optimize the loading of third-party resources?](https://developer.chrome.com/blog/third-party-scripts/), Addy Osmani, [08/2022]
 - [How anti-flicker snippets from A/B testing tools impact site speed](https://www.debugbear.com/blog/ab-testing-anti-flicker-body-hiding), Matt Zeunert (DebugBear), [02/2022]
 - [Web Almanac 2021: Third Parties](https://almanac.httparchive.org/en/2021/third-parties), Barry Pollard, [11/2021]
 - [Best practices for using third-party embeds](https://web.dev/embed-best-practices/), Leena Sohoni & Katie Hempenius & Addy Osmani, [10/2021]
@@ -398,6 +404,7 @@ Overview of performance related blogs
 
 ### Optimise the Critical Render Path
 
+- [How to eliminate render blocking resources](https://www.debugbear.com/blog/render-blocking-resources), Debugbear, [08/2022]
 - [Optimizing resource loading with Priority Hints](https://web.dev/priority-hints/), Patrick Meena & Addy Osmani & Leena Sohoni, [10/2021]
 - [Chrome Resource Priorities and Scheduling](https://docs.google.com/document/d/1bCDuq9H1ih9iNjgzyAL0gpwNFiEP4TZS-YLRp_RuMlc/edit?usp=sharing), Patrick Meenan, [09/2021]
 - [How To Optimize CSS for Peak Site Performance](https://kinsta.com/blog/optimize-css/), Craig Buckler, [09/2021]
@@ -817,6 +824,7 @@ Learn what influence PWA have on business metrics.
 - [Fast Fashion: Missguided](https://www.youtube.com/watch?v=mLzt23ZVGx0&app=desktop), Mark Leach & Andy Davies, DeltaV, [06/2018]
 - [Case study: analyzing the Walmart site performance](https://iamakulov.com/notes/walmart/), Ivan Akulov, [04/2018]
 - [A Pinterest Progressive Web App Performance Case Study](https://medium.com/dev-channel/a-pinterest-progressive-web-app-performance-case-study-3bd6ed2e6154), Addy Osmani, [11/2017]
+- [Page Weight Matters - Youtube player project feather](https://blog.chriszacharias.com/page-weight-matters), CHRIS ZACHARIAS, [12/2012]
 
 ## Open data sources
 

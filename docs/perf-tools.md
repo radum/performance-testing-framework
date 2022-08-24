@@ -44,6 +44,8 @@ The bigger the gap the bigger the chance a user gets frustrated.
 - [Request Map Generator](https://requestmap.herokuapp.com/)
 The Request Map Generator is the go to place to understand what 3rd party tools are running on your page and how much data they are adding.
 - [Webpagetest Slack Integration](https://github.com/WebPageTest/webpagetest-slack)
+- [WPT Gauntlet](https://github.com/jpnelson/wpt-gauntlet)
+wpt-gauntlet is a tool for running a page through a "gauntlet" of web page test runs. This can be combined with jq or tracex to do custom lab performance benchmarking at a scale large enough for statistical significance
 
 #### Lighthouse & CrUX & Core Web Vitals
 

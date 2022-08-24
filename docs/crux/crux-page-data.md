@@ -16,13 +16,14 @@ If there is not enough data available, the Core Web Vitals of the next bigger gr
 
 ![image](https://user-images.githubusercontent.com/21277749/119415571-2abbf280-bcf2-11eb-9489-bad8851e805e.png)
 
-
 ## CrUX API - What data do I get?
 
 * You get the 75 percentile of the last 28 days for each Core Web Vital.
 * The CrUX API is updated daily between 8 am and 10 am (GMT).
 
 More info:
+
+* [CrUX Docs](https://developer.chrome.com/docs/crux/)
 * [Core Web Vitals - The final Countdown](https://www.netcentric.biz/insights/2021/05/core-web-vitals.html) by Fabian Krumbholz
 * [Ask Me Anything - Core Web Vitals, Google I/O 05/2021](https://github.com/fabkrum/web-performance-resources/blob/master/googleio-core-web-vitals-ama.md)
 * [An In-Depth Guide To Measuring Core Web Vitals](https://www.smashingmagazine.com/2021/04/complete-guide-measure-core-web-vitals/) by Barry Pollard
