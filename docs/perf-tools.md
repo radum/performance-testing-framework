@@ -7,8 +7,8 @@
     - [Free tools and services](#free-tools-and-services)
       - [Performance Audits](#performance-audits)
       - [Webpagetest](#webpagetest)
-      - [Lighthouse & CrUX & Core Web Vitals](#lighthouse--crux--core-web-vitals)
-      - [Images & Video](#images--video)
+      - [Lighthouse \& CrUX \& Core Web Vitals](#lighthouse--crux--core-web-vitals)
+      - [Images \& Video](#images--video)
       - [Thirdparty](#thirdparty)
       - [Development Tools](#development-tools)
       - [Network Tools](#network-tools)
@@ -148,6 +148,7 @@ Insert your website URL below and find out by how much of your CSS file size can
 - [Microsoft WebHint](https://webhint.io/)
 webhint is a customizable linting tool that helps you improve your site's accessibility, speed, cross-browser compatibility, and more by checking your code for best practices and common errors.
 - [Chrome Developer Tools](https://developer.chrome.com/devtools)
+- [Chrome Developer Tools utilities API reference ($(selector), monitor(), etc)](https://developer.chrome.com/docs/devtools/console/utilities/)
 This is the go to tool for all web developers. Understand how your code gets loaded, parsed and rendered. – 🚀
 - [Yellow Lab Tools](https://yellowlab.tools)
 Online test to help speeding up heavy web pages: Frontend Quality, WebPerf, JS Profiling – 🚀
@@ -177,6 +178,12 @@ Learn how to get rid of jQuery dependencies in your project. This page shows you
 - [Browser Scope](https://www.browserscope.org/)
 Browserscope is a community-driven project for profiling web browsers. The goals are to foster innovation by tracking browser functionality and to be a resource for web developers.
 - [CSS stats](https://cssstats.com/)
+- [trace.cafe]https://trace.cafe/
+Easy webperf trace sharing for Chrome
+- [Firefox profiler](https://profiler.firefox.com/)
+Capture a performance profile. Analyse it. Share it. Make the web faster.
+- [V8 system analyzer](https://v8.github.io/tools/head/system-analyzer/index.html)
+Unified web interface to analyse runtime information stored in the v8 log.
 
 **Chrome dev tools Extensions**
 
@@ -227,6 +234,8 @@ Plow is a HTTP(S) benchmarking tool, written in Golang.
 
 #### Fonts
 
+- [Custom font design spaces from variable fonts.](https://slice-gui.netlify.app/)
+Slice is an open-source, cross-platform GUI app that generates fonts with custom design sub-spaces from variable font inputs.
 - [Autmatic Font Matching](https://deploy-preview-15--upbeat-shirley-608546.netlify.app/perfect-ish-font-fallback/?font=Montserrat)
 - [Font-Face Descriptor Playground](https://codepen.io/simonjhearne/pen/rNMGJyr)
 - [Font Style Matcher](https://meowni.ca/font-style-matcher/)

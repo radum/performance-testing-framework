@@ -28,6 +28,9 @@ If you want to change the median run to another metric add `?medianMetric={metri
 - https://www.webpagetest.org/video/compare.php?tests=210621_BiDcY9_42cd9d50ac4ebfe05e0364ea73fd6e93-r%3A1-c%3A0&thumbSize=200&ival=100&end=3
 If you to show only up until a certain second in Filmstrip view add an `&end={number of seconds}` param.
 
+- https://www.webpagetest.org/video/compare.php?tests=220919_BiDcPT_FQG,220919_BiDc75_FQF&ignoreTTFB
+Experiments have a "ignoreTTFB" URL param in the context of A/B comparisons to avoid the server variability. The feature is only surfaced beyond a threshold % difference, but power users can always add it to the URL.
+
 ## How-To
 
 - https://www.robinosborne.co.uk/2019/05/20/a-step-by-step-guide-to-setting-up-an-autoscaling-private-webpagetest-instance/

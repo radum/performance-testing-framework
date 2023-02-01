@@ -20,6 +20,7 @@
     - [Optimise the Critical Render Path](#optimise-the-critical-render-path)
     - [Javascript and Render Performance](#javascript-and-render-performance)
     - [Perceived performance](#perceived-performance)
+    - [SEO](#seo)
     - [Tooling Articles](#tooling-articles)
     - [Energy Consumption and sustainability](#energy-consumption-and-sustainability)
   - [Online courses](#online-courses)
@@ -101,6 +102,7 @@ Overview of performance related blogs
 
 - [Fabian Krumbhol (fabkrum)](https://github.com/fabkrum/web-performance-resources) - Up to date collection of valuable web performance resources
 - [Awesome WPO](https://github.com/davidsonfellipe/awesome-wpo) - A curated list of Web Performance Optimization. Everyone can contribute here!
+- [Web Performance Research](https://github.com/imteekay/web-performance-research) - Research on Web Performance articles
 
 ## Core Web Vitals
 
@@ -266,6 +268,7 @@ Overview of performance related blogs
 
 ### Image and Video Optimization
 
+- [Best practices for images](https://github.com/nucliweb/image-element), Github repo with best practices
 - [Building an effective Image Component](https://web.dev/image-component/), Leena Sohoni & Kara Erickson & Alex Castle, [10/2021]
 - [Decoding AVIF: Deep dive with cats and imgproxy](https://evilmartians.com/chronicles/decoding-avif-deep-dive-with-cats-and-imgproxy), Polina Gurtovaya & Andy Barnov, [08/2021]
 - [The performance effects of too much lazy-loading](https://web.dev/lcp-lazy-loading/), Rick Viscomi & Felix Arntz, [07/2021]
@@ -313,6 +316,7 @@ Overview of performance related blogs
 
 ### Measure Performance
 
+- [Measure What You Impact, Not What You Influence](https://csswizardry.com/2022/08/measure-what-you-impact-not-what-you-influence/), csswizardry, [08/2022]
 - [Performance regression tests at Microsoft Security](https://devblogs.microsoft.com/premier-developer/performance-regression-tests-at-microsoft-security/), Maor Frankel, [05/2022]
 - [How to select a device configuration for site speed tests](https://www.debugbear.com/blog/site-speed-device-configuration), debugbear, [06/2022]
 - [Fixing Performance Regressions Before they Happen](https://netflixtechblog.com/fixing-performance-regressions-before-they-happen-eab2602b86fe), Netflix, [01/2022]
@@ -476,6 +480,7 @@ Overview of performance related blogs
 - [What forces layout/reflow?](https://gist.github.com/paulirish/5d52fb081b3570c81e3a), Paul Irish
 - [Using requestIdleCallback](https://developers.google.com/web/updates/2015/08/using-requestidlecallback), Paul Lewis, [01/2018]
 - [Optimize Javascript Execution](https://developers.google.com/web/fundamentals/performance/rendering/optimize-javascript-execution), Paul Lewis, [01/2018]
+- [A CSP Compliant non-blocking script loader](https://calendar.perfplanet.com/2018/a-csp-compliant-non-blocking-script-loader/), Philip Tellis (Perplanet), [12/2018]
 - [Why Web Developers Need to Care about Interactivity](https://philipwalton.com/articles/why-web-developers-need-to-care-about-interactivity/), Philip Walton, [12/2017]
 - [Improving Performance with the Paint Timing API](https://www.sitepen.com/blog/2017/10/06/improving-performance-with-the-paint-timing-api), Umar Hansa, [10/2017]
 - [Deploying ES2015+ Code in Production Today](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/),  Philip Walton, [09/2017]
@@ -503,6 +508,10 @@ Overview of performance related blogs
 - [True Lies Of Optimistic User Interfaces](https://www.smashingmagazine.com/2016/11/true-lies-of-optimistic-user-interfaces/), Denys Mishunov, [11/2016]
 - [Taking A Look At The State Of Progressive Images And User Perception](https://www.smashingmagazine.com/2018/02/progressive-image-loading-user-perceived-performance/), José Manuel Pérez, [02/2018]
 - [Just-noticeable difference](https://en.wikipedia.org/wiki/Just-noticeable_difference)
+
+### SEO
+
+- [Site Speed and Search Ranking (Complete Guide)](https://calibreapp.com/blog/site-speed-search-ranking-complete-guide), calibreapp, [08/2022]
 
 ### Tooling Articles
 

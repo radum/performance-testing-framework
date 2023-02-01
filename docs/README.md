@@ -1,5 +1,14 @@
 # Documentation
 
+> Stages of performance delusion:
+> It's fast
+> It's fast enough
+> It's fast enough for my users
+> Solution too hard
+> Does performance really matter?
+>
+> https://twitter.com/jaffathecake/status/799158439918321664
+
 ## Performance resources
 
 - [ Curate list of web performance resources](perf-resources.md)
