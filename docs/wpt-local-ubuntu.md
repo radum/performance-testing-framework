@@ -4,7 +4,7 @@
 
 > 20.04 LTS didn't work for me, the agent failed to register although the install was ok.
 
-**Install dependencies**
+### Install dependencies
 
 ```bash
 # Install Homebrew (useful to install various tools)
@@ -14,7 +14,7 @@
 sudo apt -y install xserver-xorg-core xserver-xorg-video-dummy
 ```
 
-**Install WPT agent**
+### Install WPT agent
 
 ```bash
 WPT_DEVICE_NAME="Local Server" WPT_SERVER="192.168.0.150:4000" WPT_LOCATION="Local_Ubuntu" WPT_KEY="location_key_1" DISABLE_IPV6=y WPT_EDGE=n WPT_BRAVE=n WPT_EPIPHANY=n bash <(curl -s https://raw.githubusercontent.com/WPO-Foundation/wptagent-install/master/debian.sh)
@@ -37,7 +37,22 @@ gnirehtet run
 
 > TODO: For now running the above makes the agent not to run the device anymore. Let the test start and right away run gnirehtet again and that will fix the issue.
 
-**Run WPT server locally**
+### Install WPT server
+
+```bash
+WPT_BRANCH="master" bash <(curl -s https://raw.githubusercontent.com/WPO-Foundation/wptserver-install/master/ubuntu.sh)
+```
+
+Once that is finish you will get this message:
+
+```
+Setup is complete. System reboot is recommended. The locations need to be configured manually in /var/www/webpagetest/www/settings/locations.ini The settings can be tweaked in /var/www/webpagetest/www/settings/settings.ini
+The location key to use when configuring agents is: KfrAnthfeA0JY5drimUySvzOLtMGp2w An API key to use for automated testing is: FAINsE9C3A1Xo3SWhJecHRtrAmRKZBOUgH
+```
+
+Once this goes OK you can open the IP addresss of the location and WPT will load.
+
+## Run WPT server locally
 
 ```bash
 docker-compose -f docker-compose.yml -f docker-compose-macos.yml up wpt_server
