@@ -2,7 +2,7 @@
 
 > This runs the agent on Pi and the WPT Server using Docker locally.
 
-## Install WPT agent
+## Install and run a WPT agent
 
 1. Cd to your home folder `cd ~` and clone the agent repo
 

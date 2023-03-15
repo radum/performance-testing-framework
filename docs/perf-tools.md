@@ -31,6 +31,7 @@
 - [AutoWebPerf (AWP)](https://github.com/GoogleChromeLabs/AutoWebPerf), Google, AutoWebPerf provides a flexible and scalable framework for running web performance audits with arbitrary audit tools like WebPageTest and PageSpeedInsights.
 This is a very powerfull tool to run bulk tests on various platforms with multiple input and output formats.
 - [WebPageTest Bulk Tester](https://github.com/andydavies/WPT-Bulk-Tester), built by Andy Davies, uses Google Sheets to test multiple URLs using WebPageTest using configurable test settings.
+- [Performance Proxy](https://perfproxy.com/), Enter a URL and select performance optimisations, a resulting URL will be generated for testing. Made by Simon Hearne using Cloudflare workers. [Source](https://github.com/simonhearne/perfproxy).
 
 #### Webpagetest
 

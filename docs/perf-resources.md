@@ -9,6 +9,8 @@
     - [Podcasts](#podcasts)
     - [Awesome lists of web performance resources](#awesome-lists-of-web-performance-resources)
   - [Core Web Vitals](#core-web-vitals)
+    - [Core Web Vitals demos](#core-web-vitals-demos)
+      - [INP](#inp)
     - [Core Web Vitals Tools](#core-web-vitals-tools)
   - [Articles](#articles)
     - [General](#general)
@@ -171,6 +173,16 @@ Overview of performance related blogs
 - [The Science Behind Web Vitals](https://blog.chromium.org/2020/05/the-science-behind-web-vitals.html), Amar Sagoo / Annie Sullivan / Vivek Sekhar, [05/2020]
 - [Evaluating page experience for a better web](https://developers.google.com/search/blog/2020/05/evaluating-page-experience), Sowmya Subramanian (Google), [05/2020]
 - [Lessons learned from performance monitoring in Chrome](https://www.youtube.com/watch?v=ctavZT87syI) ([Slides](https://www.slideshare.net/AnnieSullivan9/monitoring-and-metrics-in-chrome-196438420)), Annie Sullivan, [11/2019]
+
+### Core Web Vitals demos
+
+#### INP
+
+- https://inp-demo.glitch.me/
+- https://mmocny.github.io/canvas-worker-raf-fps-meter/responsiveness.html
+- https://chromedevtools.github.io/performance-stories/long-interaction/index.html
+- https://mmocny.github.io/responsiveness-demo-page/lightningTalk/
+- https://github.com/just-jeb/long-tasks-playground
 
 ### Core Web Vitals Tools
 
