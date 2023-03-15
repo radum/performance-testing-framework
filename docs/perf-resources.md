@@ -108,6 +108,15 @@ Overview of performance related blogs
 
 ## Core Web Vitals
 
+- [Optimize Time to First Byte](https://web.dev/optimize-ttfb/), Jeremy Wagner, [01/2023]
+- [Optimizing Largest Contentful Paint (LCP)](https://www.youtube.com/watch?v=JhTR2fz68ec), Harry Roberts, [10/2022]
+- [Google's top Core Web Vitals recommendations for 2023](https://web.dev/top-cwv-2023/), Barry Pollard, Rick Viscomi, Philip Walton, Jeremy Wagner, Brendan Kenny, [01/2023]
+- [Experimenting with measuring soft navigations - Chrome Developers](https://developer.chrome.com/blog/soft-navigations-experiment/), Barry Pollard, Yoav Weiss, [02/2023]
+- [What goes into making a new Web Vital metric](https://calendar.perfplanet.com/2022/making-a-new-web-vital-metric/), Annie Sullivan, [12/2022]
+- [Why is CrUX data different from my RUM data?](https://web.dev/crux-and-rum-differences/), Barry Pollard, [08/2022]
+- [Luxury retailer Farfetch sees higher conversion rates for better Core Web Vitals]([https://developer.chrome.com/docs/crux/](https://web.dev/farfetch/)), Rui Santos & Manuel Garcia & Patrícia Couto Neto & Dikla Cohen, [07/2022]
+- [Optimising Largest Contentful Paint](https://csswizardry.com/2022/03/optimising-largest-contentful-paint/), Harry Roberts, [03/2022]
+- [Optimising Core Web Vitals on SPAs](https://simonhearne.com/2022/core-web-vitals-on-spas/), Simon Hearne, [03/2022]
 - [A New Measure of Responsiveness](https://noti.st/anniesullie/ecTDnH/a-new-measure-of-responsiveness), Annie Sullivan, [06/2022]
 - [How CSS opacity animations can delay the Largest Contentful Paint](https://www.debugbear.com/blog/opacity-animation-poor-lcp), DebugBear, [03/2022]
 - [Hands On with the new Responsiveness Metrics](https://calendar.perfplanet.com/2021/hands-on-with-the-new-responsiveness-metrics/), Hongbo Song, [12/2021]
@@ -193,6 +202,7 @@ Overview of performance related blogs
 
 ### General
 
+- [The Performance Inequality Gap, 2023](https://infrequently.org/2022/12/performance-baseline-2023/), Alex Russell, [12/2022]
 - [Lazy Load '22 - Performance Mistakes - An HTTP Archive Deep Dive](https://www.slideshare.net/PaulCalvano/lazy-load-22-performance-mistakes-an-http-archive-deep-dive), Paul Calvano, [06/2022]
 - [A Management Maturity Model for Performance](https://infrequently.org/2022/05/performance-management-maturity/), Alex Russell, [05/2022]
 - [Understanding the performance impact of anti-flicker snippets](https://www.speedcurve.com/blog/web-performance-anti-flicker-snippets/), Andy Davies, [04/2022]
@@ -224,6 +234,7 @@ Overview of performance related blogs
 
 ### Network and Caching
 
+- [Worker Runtimes](https://workers.js.org/)
 - [Caching Header Best Practices](https://simonhearne.com/2022/caching-header-best-practices/), Simon Hearne, [01/2022]
 - [Bringing instant page-loads to the browser through speculative prerendering](https://web.dev/speculative-prerendering/#in-browser-speculation-rules-for-prefetch-and-prerender), Leena Sohoni & Addy Osmani, 02/2022
 - https://k6.io/blog/comparing-best-open-source-load-testing-tools
@@ -313,6 +324,8 @@ Overview of performance related blogs
 
 ### Web Fonts
 
+- [How to Download and Optimize Google Fonts](https://www.aleksandrhovhannisyan.com/blog/downloading-and-optimizing-google-fonts/#optimizing-and-subsetting-any-font-with-glyphhanger), Aleksandr Hovhannisyan, [02/2022]
+- [Fallback Font Generator](https://screenspan.net/fallback)
 - [30 Best Web Safe Fonts for Your Next Design in 2021](https://kinsta.com/blog/web-safe-fonts/), Maateo Duó, [07/2021]
 - [Making Google Fonts Faster in 2021](https://sia.codes/posts/making-google-fonts-faster/), Sia Karamalegos, [07/2021]
 - [A New Way To Reduce Font Loading Impact: CSS Font Descriptors](https://www.smashingmagazine.com/2021/05/reduce-font-loading-impact-css-descriptors/), Barry Pollard, [05/2021]
@@ -328,6 +341,10 @@ Overview of performance related blogs
 
 ### Measure Performance
 
+- [Experimenting with measuring soft navigations - Chrome Developers](https://developer.chrome.com/blog/soft-navigations-experiment/), Barry Pollard, Yoav Weiss, [02/2023]
+- [Variability Isn't the Problem](https://timkadlec.com/remembers/2022-12-08-variability-isnt-the-problem/), Tim Kadlec, [12/2022]
+- [How Fast Is Your Web App? How to Test Page Transition Performance](https://blog.webpagetest.org/posts/test-your-spa/), Scott Jehl, [09/2022]
+- [Element Timing: One true metric to rule them all?](https://www.speedcurve.com/blog/element-timing-one-true-metric/), Andy Davies, [09/2022]
 - [Measure What You Impact, Not What You Influence](https://csswizardry.com/2022/08/measure-what-you-impact-not-what-you-influence/), csswizardry, [08/2022]
 - [Performance regression tests at Microsoft Security](https://devblogs.microsoft.com/premier-developer/performance-regression-tests-at-microsoft-security/), Maor Frankel, [05/2022]
 - [How to select a device configuration for site speed tests](https://www.debugbear.com/blog/site-speed-device-configuration), debugbear, [06/2022]
@@ -390,7 +407,9 @@ Overview of performance related blogs
 
 ### Third-Party Services
 
+- [Hybrid Personalization in the Adobe Experience Platform Web SDK](https://blog.developer.adobe.com/hybrid-personalization-in-the-adobe-experience-platform-web-sdk-6a1bb674bf41), Jason Waters, [11/2023]
 - [Can browsers optimize the loading of third-party resources?](https://developer.chrome.com/blog/third-party-scripts/), Addy Osmani, [08/2022]
+- [Keeping it 100, Web Performance with Franklin](https://www.hlx.live/developer/keeping-it-100), Adobe - Project Franklin, [08/2023]
 - [How anti-flicker snippets from A/B testing tools impact site speed](https://www.debugbear.com/blog/ab-testing-anti-flicker-body-hiding), Matt Zeunert (DebugBear), [02/2022]
 - [Web Almanac 2021: Third Parties](https://almanac.httparchive.org/en/2021/third-parties), Barry Pollard, [11/2021]
 - [Best practices for using third-party embeds](https://web.dev/embed-best-practices/), Leena Sohoni & Katie Hempenius & Addy Osmani, [10/2021]
@@ -420,7 +439,11 @@ Overview of performance related blogs
 
 ### Optimise the Critical Render Path
 
+- [Why Not document.write()?](https://csswizardry.com/2023/01/why-not-document-write/), Harry Roberts, [01/2023]
+- [Speeding Up Async Snippets](https://csswizardry.com/2022/10/speeding-up-async-snippets/), Harry Roberts, [10/2022]
+- [Critical CSS? Not So Fast!](https://csswizardry.com/2022/09/critical-css-not-so-fast/), Harry Roberts, [09/2022]
 - [How to eliminate render blocking resources](https://www.debugbear.com/blog/render-blocking-resources), Debugbear, [08/2022]
+- [Priority Hints - What Your Browser Doesn’t Know (Yet)](https://www.etsy.com/codeascraft/priority-hints-what-your-browser-doesnt-know-yet), David Ross, [07/2022]
 - [Optimizing resource loading with Priority Hints](https://web.dev/priority-hints/), Patrick Meena & Addy Osmani & Leena Sohoni, [10/2021]
 - [Chrome Resource Priorities and Scheduling](https://docs.google.com/document/d/1bCDuq9H1ih9iNjgzyAL0gpwNFiEP4TZS-YLRp_RuMlc/edit?usp=sharing), Patrick Meenan, [09/2021]
 - [How To Optimize CSS for Peak Site Performance](https://kinsta.com/blog/optimize-css/), Craig Buckler, [09/2021]
@@ -446,6 +469,11 @@ Overview of performance related blogs
 
 ### Javascript and Render Performance
 
+- [Five Data-Loading Patterns To Boost Web Performance](https://www.smashingmagazine.com/2022/09/data-loading-patterns-improve-frontend-performance/), Agustinus Theodorus, [09/2022]
+- [Optimize long tasks](https://web.dev/optimize-long-tasks/), Jerry Wagner, [09/2022]
+- [Profiling & Optimizing the runtime performance with the DevTools Performance tab](iamtk.co/profiling-and-optimizing-the-runtime-performance-with-the-devtools-performance-tab), TK, 08/2022
+- [Don't fight the browser preload scanner](https://web.dev/preload-scanner/), Jeremy Wagner, [05/2022]
+- [The Web Performance impact of jQuery](https://twitter.com/TheRealNooshu/status/1509487050122276864), Matt Hobbs, [03/2022]
 - [From Static to Interactive: Why Resumability is the Best Alternative to Hydration](https://www.builder.io/blog/from-static-to-interactive-why-resumability-is-the-best-alternative-to-hydration), MIŠKO HEVERY, [03/2022]
 - [Improve how you architect webapps](https://www.patterns.dev/), Addy Osmani & Lydia Hallie
 - [Have Single-Page Apps Ruined the Web? | Transitional Apps](https://www.youtube.com/watch?v=860d8usGC0o), Rich Harris, [12/2021]
@@ -556,6 +584,8 @@ These are excellent courses for web developer to gain a lot of insights about we
 - Udacity: [Website Performance Optimization by Google](https://www.udacity.com/course/website-performance-optimization--ud884) (free) This course is great to start. You will learn how the browser works internally and how you can optimise the critical render path.
 
 ### Paid Video Courses
+
+- [Setting up DevTools for Performance Testing](https://csswizardry.gumroad.com/l/perfect-devtools), Harry Roberts, [07/2022]
 
 - [Lightning-Fast Web Performance](https://scottjehl.com/lfwp/), Scott Jehl, 05/2020
 This course is great for Frontend Developers who are interested in web performance.
@@ -737,6 +767,7 @@ This is a really good talk about how humans perceive performance. Eli shares a l
 
 ### Meta
 
+- [Web Performance Research](https://github.com/imteekay/web-performance-research), TK, [08/2022]
 - [performance.now().reject(reasons)](https://www.youtube.com/watch?v=vtIfVPtN6io) ([Slides](https://docs.google.com/presentation/d/18KW9c8ywYvMVsXVwU-Llvc1nEX40y9Fj3VBAkHRKs_4/present)), Ilya Grigorik, 11/2019
 - [A Decade of Disciplined Delivery](https://www.youtube.com/watch?v=HC1eVj5cQOo) ([Slides](https://www.dropbox.com/s/lfvrkzoqkecnh0h/DecadeOfDelivery_PDF.pdf)), Henri Helvetica, 11/2019
 - [The Future of Performance](https://www.youtube.com/watch?v=Jz3Fu1o356g) ([Slides](https://www.dropbox.com/s/2bxw50ajomvniio/future-web-perf-perfnow.pdf?dl=0)), Vitaly Friedman, 11/2019
@@ -825,9 +856,11 @@ Learn what influence PWA have on business metrics.
 - [Improving Cumulative Layout Shift at Telegraph Media Group](https://web.dev/telegraph/), Chris Boakes, [06/2021]
 - [Improving The Performance Of An Online Store (Case Study)](https://www.smashingmagazine.com/2021/06/front-end-performance-online-store-jewellerybox/), Jennifer Brehm, [06/2021]
 - [How We Improved Our Core Web Vitals (Case Study)](https://www.smashingmagazine.com/2021/05/core-web-vitals-case-study/), [05/2021]
+- [Optimizing the Performance of a React Progressive Web App](https://www.iamtk.co/optimizing-the-performance-of-a-react-progressive-web-app), TK, [04/2021]
 - [Making Cybertruck Faster](https://tryblackbird.com/blog/cybertruck), [04/2021]
 - [How has the fastest F1 website in 2021?](https://jakearchibald.com/2021/f1-perf-part-1/), Jake Archibald, [03/2021]
 - [How we built UK’s fastest online fashion-store](https://www.scipioerp.com/2021/03/08/how-we-built-uks-fastest-online-fashion-store/), Paul, [03/2021]
+- [Performance: Prefetch Next Pages Chunks](https://www.iamtk.co/performance-prefetch-next-pages-chunks), TK, [01/2021]
 - [Making GitHub’s new homepage fast and performant](https://github.blog/2021-01-29-making-githubs-new-homepage-fast-and-performant/), Tobias Ahlin, [01/2021]
 - [How We Improved SmashingMag Performance](https://www.smashingmagazine.com/2021/01/smashingmag-performance-case-study/), Vitaly Friedman, [01/2021]
 - [Getting Postmark’s Lighthouse Performance Score to 100](https://wildbit.com/blog/2020/09/30/getting-postmark-lighthouse-performance-score-to-100#:~:text=What%20if%20we%20could%20replace%20the%20real%20widget), Eugene Fedorenko, [09/2020]
@@ -915,4 +948,4 @@ The [Performance Timing Primer](https://w3c.github.io/perf-timing-primer/) gives
 - <https://github.com/Nooshu/wpt-jq-data-scripts>
 - <https://octo.github.com/projects/flat-data> TODO: Explore how to use it to gather bulk data
 - http://s3.amazonaws.com/alexa-static/top-1m.csv.zip
-- https://github.com/fabkrum/web-performance-resources/commit/6a11950db291167d3e2f1bdcbbcbe05fbb0fdf13
+- https://github.com/fabkrum/web-performance-resources/commit/0ba258bf441bb8418da859a952c9870a66659f75

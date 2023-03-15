@@ -190,7 +190,7 @@ docker-compose -f docker-compose.yml -f docker-compose-macos.yml up lhci-server
 - [ ] Run containers from Jenkins via docker-compose or at leaset the built ones
 - [ ] Test runs comparison
 - [x] Add JMeter or Gantling load testing (UPDATE: Went with K6 as it is very fast and uses less memory.)
-- [ ] Better docs to explain how it should be run
+- [x] Better docs to explain how it should be run
 - [ ] More docs around architecture and how it works
 - [ ] Explain how to test localhost using extra_hosts for wpt-agent
 - [ ] jenkins-cli.jar should already be part of `/var/jenkins_home/war/WEB-INF/jenkins-cli.jar` but when I build it, it was not so I had to manually copy it.
