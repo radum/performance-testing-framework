@@ -191,6 +191,7 @@ Overview of performance related blogs
 - https://mmocny.github.io/canvas-worker-raf-fps-meter/responsiveness.html
 - https://chromedevtools.github.io/performance-stories/long-interaction/index.html
 - https://mmocny.github.io/responsiveness-demo-page/lightningTalk/
+- https://github.com/mmocny/responsiveness-demo-page
 - https://github.com/just-jeb/long-tasks-playground
 
 ### Core Web Vitals Tools
