@@ -2,6 +2,8 @@
 
 reports/*
 !reports/**/.gitkeep
+cloudflare/miniflare/.mf
+cloudflare/miniflare/node_modules
 wpt_data/dat/*
 wpt_data/logs/*
 wpt_data/results/*

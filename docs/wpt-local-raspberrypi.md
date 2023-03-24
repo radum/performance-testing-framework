@@ -67,7 +67,8 @@ git clone --depth 1 --branch=prod https://github.com/WPO-Foundation/webpagetest.
 
 You can configure the local server using the `docker\local\*` settings file, for example to enable CrUX.
 
-Set this `$experiments_paid` to true to enable them.
+Set this `$experiments_paid` to true and add `experimentURL=experiments.webpagetest.org` into `docker/local/wptconfig/settings.ini` to enable them.
+You can use a local miniflare instead of `experiments.webpagetest.org` ([example](cloudflare/miniflare/README.md)).
 
 ## Open WPT and start testing:
 
