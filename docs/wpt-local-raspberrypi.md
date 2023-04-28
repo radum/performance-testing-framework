@@ -22,6 +22,31 @@ All these lines are copied from:
 # Make sure you install Chromium as Chrome for Pi arm64 is not available.
 ```
 
+To install / update Chrome (Chromium) on Pi ARM
+
+```bash
+# More info:
+# https://askubuntu.com/questions/1420925/why-are-chromium-and-firefox-arm64-armhf-latest-versions-only-available-in-ubunt
+# https://askubuntu.com/questions/1255692/is-it-still-possible-to-install-chromium-as-a-deb-package-on-20-04-lts-using-som
+# https://launchpad.net/%7Ephd/+archive/ubuntu/chromium-browser/
+
+# Gives you the ubuntu version
+lsb_release -a
+
+sudo snap remove chromium
+sudo apt remove -y chromium*
+
+sudo add-apt-repository ppa:phd/chromium-browser
+
+cat <<EOF | sudo tee /etc/apt/preferences.d/pin-chromium-deb
+Package: *
+Pin: release o=LP-PPA-phd-chromium-browser
+Pin-Priority: 1337
+EOF
+
+sudo apt-get install chromium-browser
+```
+
 3. Run the agent
 
 ```bash

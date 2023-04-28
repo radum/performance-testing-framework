@@ -139,6 +139,8 @@ A Google Sheet provided by Harry Roberts which gives you a nice overview over yo
 Find similar pages for a competitor benchmark.
 - [Build with](https://builtwith.com/)
 Understand the technical building blocks of a website.
+- [Bundle Buddy](https://www.npmjs.com/package/bundle-buddy)
+Bundle Buddy is a tool to help you find source code duplication across your javascript chunks/splits. This enables you to fine tune code splitting parameters to reduce bundle invalidation rates as well as improve repeat page load performance \o/.
 
 #### Development Tools
 

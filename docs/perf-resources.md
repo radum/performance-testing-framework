@@ -203,6 +203,7 @@ Overview of performance related blogs
 
 ### General
 
+- [Performance audit of an Italian news website](https://www.giacomodebidda.com/posts/performance-audit-of-an-italian-news-website/), Giacomo Debidda, [02/2023]
 - [Why you need to know your site's performance plateau (and how to find it)](https://www.speedcurve.com/blog/web-performance-poverty-line/), Tammy Everts, [03/2023]
 - [The Performance Inequality Gap, 2023](https://infrequently.org/2022/12/performance-baseline-2023/), Alex Russell, [12/2022]
 - [Lazy Load '22 - Performance Mistakes - An HTTP Archive Deep Dive](https://www.slideshare.net/PaulCalvano/lazy-load-22-performance-mistakes-an-http-archive-deep-dive), Paul Calvano, [06/2022]
