@@ -118,6 +118,7 @@ Free png optimizer for MacOS
 
 #### Thirdparty
 
+- [Timing Snippets for 3rd-Party Tags](https://github.com/andydavies/tag-timing-snippets/tree/main) Sometimes 3rd-Party tags provide content that's core to our visitors experience, other times they provide invisible features that allow us to get a better understanding of our visitors experience and how they behave.
 - [3P web](https://www.thirdpartyweb.today/), Shows the impact of Third-Party Tools based on HTTP Archive data.
 - [https://better.fyi/trackers/](https://better.fyi/trackers/)
 Nice list of 3rd party trackers with detailed information, for example about how to block the service. Which comes in handy when you want to measure the impact of a tool.
@@ -221,6 +222,7 @@ Find the CDN which is right for you.
 - [Is HTTP2 fast yet?](http://ishttp2fastyet.com/), Andy Davies
 - [Cache Control Header Builder](https://cache-control.sdgluck.now.sh/)
 - [httpstat cli](https://github.com/davecheney/httpstat), It's like curl -v, with colours.
+- [Speedvitals TTFB test](https://speedvitals.com/ttfb-test), Measures it from 40 different locations.
 
 #### Load testing
 
@@ -271,6 +273,7 @@ This plugin will highlight and visualize the Cumulative Layout Shift of the curr
 
 #### Other Tools
 
+- [Capo Rick Viscomi](https://github.com/rviscomi/capo.js) - Get your head in order
 - [ProgUX – The best experience for every user](https://progux.org/)
 - [Web Performance Heat Map Generator](http://heatmap.webperf.tools/)
 - [What does my site cost](https://whatdoesmysitecost.com/)
