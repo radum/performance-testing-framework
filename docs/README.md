@@ -21,11 +21,11 @@ Performance related tools used to measure, test, report and debug performance.
 
 ## Performance Tools - WPT specific
 
-- [How to run a private WPT instance](wpt-local-ubuntu.md)
+- [How to run a private WPT instance](wpt/wpt-agent-local-ubuntu.md)
 
 ## Performance Tools - Sitespeed.io specific
 
-- [How to run sitespeed locally](sitespeed-local.md)
+- [How to run sitespeed locally](sitespeed/sitespeed-local.md)
 
 ## Performance 1 liners
 

@@ -14,6 +14,7 @@
     - [Core Web Vitals Tools](#core-web-vitals-tools)
   - [Articles](#articles)
     - [General](#general)
+    - [SEO and Marketing](#seo-and-marketing)
     - [Network and Caching](#network-and-caching)
     - [Image and Video Optimization](#image-and-video-optimization)
     - [Web Fonts](#web-fonts)
@@ -81,6 +82,7 @@ Great resource to learn the newest Chrome Dev Tools tips and tricks
 
 - [WebPageTest Blog](https://blog.webpagetest.org/)
 - [Calibre Blog](https://calibreapp.com/blog)
+- [RUMVision](https://www.rumvision.com/blog/)
 - [Harry Roberts](https://csswizardry.com/archive/)
 - [Andy Davies](https://andydavies.me/)
 - [Matt Hobbs](https://nooshu.github.io/blog/)
@@ -108,6 +110,10 @@ Overview of performance related blogs
 
 ## Core Web Vitals
 
+- [The 9 most effective Core Web Vitals opportunities of 2023](https://www.youtube.com/watch?v=mdB-J6BRReo), Barry Pollard, [05/2023]
+- [Advancing Interaction to Next Paint](https://web.dev/inp-cwv/), Rick Viscomi, Annie Sullivan, [05/2023]
+- [How to optimize web responsiveness with Interaction to Next Paint](https://www.youtube.com/watch?v=KZ1kxzsJZ5g), Annie Sullivan, Michal Mocny, [05/2023]
+- [Largest Contentful Paint update in Chrome version 112](https://www.rumvision.com/blog/largest-contentful-paint-update-in-chrome-version-112/), Karlijn Löwik, [04/2023]
 - [Optimize Time to First Byte](https://web.dev/optimize-ttfb/), Jeremy Wagner, [01/2023]
 - [Optimizing Largest Contentful Paint (LCP)](https://www.youtube.com/watch?v=JhTR2fz68ec), Harry Roberts, [10/2022]
 - [Google's top Core Web Vitals recommendations for 2023](https://web.dev/top-cwv-2023/), Barry Pollard, Rick Viscomi, Philip Walton, Jeremy Wagner, Brendan Kenny, [01/2023]
@@ -136,7 +142,6 @@ Overview of performance related blogs
 - [Core Web Vitals Optimizer (proven process & open-source tool)](https://github.com/fabkrum/core-web-vitals-optimizer/blob/main/README.md), Fabian Krumbholz, 09/2021
 - [How SPA architectures affect Core Web Vitals](https://web.dev/vitals-spa-faq/), Philip Walton & Yoav Weiss, 09/2021
 - [Web Vitals patterns](https://web.dev/patterns/web-vitals-patterns/), Katie Hempenius, 09/2021
-- [Core Web Vitals is a Measurable Ranking Factor](https://www.sistrix.com/blog/core-web-vitals-is-a-measurable-ranking-factor/), Johannes Beus, 09/2021
 - [Insight into Core Web Vitals from the Chrome Platform Team](https://www.youtube.com/watch?v=CcHCbFhx2UM), Annie Sullivan & Katie Hempenius, 08/2021
 - [Why lab and field data can be different (and what to do about it)](https://web.dev/lab-and-field-data-differences/), Philip Walton, 08/2021
 - [A performance-focused workflow based on Google tools](https://web.dev/vitals-tools-workflow/), Antoine Bisch & Garima Mimani, 08/2021
@@ -170,7 +175,6 @@ Overview of performance related blogs
 - [Debug Web Vitals in the field](https://web.dev/debug-web-vitals-in-the-field/), Philip Walton, [04/2021]
 - [Cookie Banners and Web Vitals](https://blr.design/blog/cookie-banner-web-vitals/), Brian Louis Ramirez, [03/2021]
 - [How to create a competitive analysis dashboard for Core Web Vitals using Google Data Studio](https://www.deepcrawl.com/blog/best-practice/competitive-analysis-core-web-vitals-google-data-studio/), Rachel Anderson, [03/2021]
-- [Everything we know about Core Web Vitals and SEO](https://simonhearne.com/2021/core-web-vitals-seo/), Simon Hearne, [02/2021]
 - [Cumulative Layout Shift Study of Over 1 Million Websites](https://www.seoclarity.net/blog/core-web-vitals-study), Mitul Gandhi, [02/2021]
 - [Analyzing Web Vitals with WebPageTest](https://calendar.perfplanet.com/2020/analyzing-web-vitals-with-webpagetest/), Patrick Meenan, [12/2020]
 - [How to Improve Core Web Vitals](https://simonhearne.com/2020/core-web-vitals/), Simon Hearne, [10/2020]
@@ -219,7 +223,6 @@ Overview of performance related blogs
 - [Hobson's Browser](https://infrequently.org/2021/07/hobsons-browser/), Alex Rusell, [07/2021]
 - [Fast load times Techniques for improving site performance.](https://web.dev/fast/)
 - [Resource Fetch Prioritization and Scheduling in Chromium](https://docs.google.com/document/d/1bCDuq9H1ih9iNjgzyAL0gpwNFiEP4TZS-YLRp_RuMlc/edit) - [08/2015]
-- [How To Perform An SEO Audit Using Google Search Console](https://seosly.com/how-to-audit-site-with-google-search-console/), Olga Zarzeczna, [06/2021]
 - [Website Speed: Advice from the trenches](https://www.cmg.digital/website-speed-advice-from-the-trenches), Bojan Basrak, [05/2021]
 - [How to Convince Your Boss to Care About Speed](https://calibreapp.com/blog/convince-your-boss-about-performance), Karolina Szczur, [04/2021]
 - [So You Want To Make Your Website Faster?](https://medium.com/codex/so-you-want-to-make-your-website-faster-d2a00db39097), Jason Knight, [04/2021]
@@ -235,9 +238,19 @@ Overview of performance related blogs
 - [Evaluating page experience for a better web](https://webmasters.googleblog.com/2020/05/evaluating-page-experience.html), Sowmya Subramanian, [05/2020]
 - [Front-End Performance Checklist 2020](https://www.smashingmagazine.com/2020/01/front-end-performance-checklist-2020-pdf-pages/), Vitaly Friedman (Smashing Magazine), [01/2020]
 
+### SEO and Marketing
+
+- [WTH Google, is Pagespeed a SEO ranking factor or not?! (Spoiler: yes, it is, but not a ranking system..)](https://www.rumvision.com/blog/is-pagespeed-a-ranking-factor-april-2023/), Erwin Hofman, [05/2023]
+- [Are Core Web Vitals affected by Google Ads?](https://www.rumvision.com/blog/google-ads-impacting-core-web-vitals/), Roderik Derksen, [11/2022]
+- [Core Web Vitals is a Measurable Ranking Factor](https://www.sistrix.com/blog/core-web-vitals-is-a-measurable-ranking-factor/), Johannes Beus, [09/2021]
+- [How To Perform An SEO Audit Using Google Search Console](https://seosly.com/how-to-audit-site-with-google-search-console/), Olga Zarzeczna, [06/2021]
+- [Everything we know about Core Web Vitals and SEO](https://simonhearne.com/2021/core-web-vitals-seo/), Simon Hearne, [02/2021]
+
 ### Network and Caching
 
 - [Worker Runtimes](https://workers.js.org/)
+- [Don't make visitors on your website wait for the same page twice](https://www.rumvision.com/blog/ttfb-challenges-that-our-client-discovered-with-rumvision/), Jordy Scholing,[ 05/2023]
+- [Make sure to check your caching rules](https://www.rumvision.com/blog/make-sure-to-check-your-caching-rules/#how-do-i-avoid), Leander Westerhout, [07/2022]
 - [Caching Header Best Practices](https://simonhearne.com/2022/caching-header-best-practices/), Simon Hearne, [01/2022]
 - [Bringing instant page-loads to the browser through speculative prerendering](https://web.dev/speculative-prerendering/#in-browser-speculation-rules-for-prefetch-and-prerender), Leena Sohoni & Addy Osmani, 02/2022
 - https://k6.io/blog/comparing-best-open-source-load-testing-tools
@@ -472,6 +485,8 @@ Overview of performance related blogs
 
 ### Javascript and Render Performance
 
+- [When JavaScript Fails](https://scribe.rip/@jason.godesky/when-javascript-fails-52eef47e90db), Jason Godesky, [02/2023]
+- [Everyone has Javascript, right?](https://www.kryogenix.org/code/browser/everyonehasjs.html), Stuart Langridge
 - [Five Data-Loading Patterns To Boost Web Performance](https://www.smashingmagazine.com/2022/09/data-loading-patterns-improve-frontend-performance/), Agustinus Theodorus, [09/2022]
 - [Optimize long tasks](https://web.dev/optimize-long-tasks/), Jerry Wagner, [09/2022]
 - [Profiling & Optimizing the runtime performance with the DevTools Performance tab](iamtk.co/profiling-and-optimizing-the-runtime-performance-with-the-devtools-performance-tab), TK, 08/2022
@@ -734,8 +749,9 @@ This is a really good talk about how humans perceive performance. Eli shares a l
 - [Web Performance Tuning with browser APIs](https://www.youtube.com/watch?v=ALN1v_sBe2g), Yaser Adel Mehraban, [06/2021]
 - [Transitioning to modern JavaScript](https://www.youtube.com/watch?v=cLxNdLK--yI) ([Article](https://web.dev/publish-modern-javascript/)), Houssein Djirdeh, Jason Miller, Chrome Dev Summit 2020, 12/2020
 - [When JavaScript Bytes](https://www.youtube.com/watch?v=JvJ0v5OohNg) ([Slides](https://noti.st/tkadlec/MC0Bvy/when-javascript-bytes)), Tim Kadlec, 11/2019
-- [Adaptive Loading — Improving the UX for millions on low-end devices](https://www.youtube.com/watch?v=puUPpVrIRkc), Addy Osmany, 11/2019
-- [Predictive Prefetching](https://www.youtube.com/watch?v=Faaf5tzqvZg) ([Slides](https://noti.st/shortdiv/jsHO3Z)), Divya Sasidhara, 11/2019
+- [You Really Don't Need All that JavaScript, I Promise.](https://www.youtube.com/watch?v=rxlJRydqmk8), Stuart Langridge, [2019]
+- [Adaptive Loading — Improving the UX for millions on low-end devices](https://www.youtube.com/watch?v=puUPpVrIRkc), Addy Osmani, [11/2019]
+- [Predictive Prefetching](https://www.youtube.com/watch?v=Faaf5tzqvZg) ([Slides](https://noti.st/shortdiv/jsHO3Z)), Divya Sasidhara, [11/2019]
 - [WebAssembly – To the browser and beyond!](https://www.youtube.com/watch?v=Z6ZhIA8i_8g) ([Slides](https://noti.st/patrickhamann/uEw4zt/webassembly-to-the-browser-and-beyond)), Patrick Hamann, 11/2019
 - [The main thread is overworked & underpaid](https://www.youtube.com/watch?v=7Rrv9qFMWNM), Surma, 11/2019
 - [Speed at Scale: Web Performance Tips and Tricks from the Trenches (Google I/O ’19)](https://www.youtube.com/watch?v=YJGCZCaIZkQ), Addy Osmani & Katie Hempenius, 05/2019
@@ -951,4 +967,4 @@ The [Performance Timing Primer](https://w3c.github.io/perf-timing-primer/) gives
 - <https://github.com/Nooshu/wpt-jq-data-scripts>
 - <https://octo.github.com/projects/flat-data> TODO: Explore how to use it to gather bulk data
 - http://s3.amazonaws.com/alexa-static/top-1m.csv.zip
-- https://github.com/fabkrum/web-performance-resources/commit/0ba258bf441bb8418da859a952c9870a66659f75
+- https://github.com/fabkrum/web-performance-resources/commit/342b24432162139c39d1b25f2ca670f06fb68454
