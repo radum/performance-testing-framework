@@ -196,6 +196,8 @@ A Chrome Devtools extension that helps you explore the distribution of DOM nodes
 
 #### Network Tools
 
+- [REDbot](https://redbot.org/)
+REDbot is lint for HTTP resources; it tests protocol correctness, cacheability, content negotiation and more.
 - [H2Vis](https://github.com/DaanDeMeyer/h2vis)
 H2Vis is an application that visualizes the inner workings of HTTP/2.
 - [Fast or Slow](https://www.fastorslow.com/)
