@@ -968,3 +968,4 @@ The [Performance Timing Primer](https://w3c.github.io/perf-timing-primer/) gives
 - <https://octo.github.com/projects/flat-data> TODO: Explore how to use it to gather bulk data
 - http://s3.amazonaws.com/alexa-static/top-1m.csv.zip
 - https://github.com/fabkrum/web-performance-resources/commit/342b24432162139c39d1b25f2ca670f06fb68454
+- https://webperf.tips/
