@@ -329,7 +329,8 @@ Overview of performance related blogs
 - [Video Playback On The Web: Video Delivery Best Practices](https://www.smashingmagazine.com/2018/10/video-playback-on-the-web-part-2/), Doug Sillars, [10/2018]
 - [Automating Resource Selection with Client Hints](https://developers.google.com/web/updates/2015/09/automating-resource-selection-with-client-hints), Ilya Grigorik, [07/2018]
 - [Image Inconsistencies: How and When Browsers Download Images](https://csswizardry.com/2018/06/image-inconsistencies-how-and-when-browsers-download-images/), Harry Roberts, [06/2018]
-- [Essential Image Optimization](https://images.guide/), Addy Osmani, [2017]
+- [Essential Image Optimization](https://web.archive.org/web/20200214202552/https://images.guide/), Addy Osmani, [2017]
+- [Web Dev images optimizations (it replaces the defunct images.guide from above)](https://web.dev/fast/#optimize-your-images)
 - [Using SVG as placeholders — More Image Loading Techniques](https://jmperezperez.com/svg-placeholders/), José M. Pérez, [10/2017]
 - [Base64 Encoding & Performance, Part 2: Gathering Data](https://csswizardry.com/2017/02/base64-encoding-and-performance-part-2/), Harry Roberts, [02/2017]
 - [Base64 Encoding & Performance, Part 1: What’s Up with Base64?](https://csswizardry.com/2017/02/base64-encoding-and-performance/), Harry Roberts, [02/2017]
