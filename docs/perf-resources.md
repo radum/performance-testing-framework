@@ -341,6 +341,7 @@ Overview of performance related blogs
 
 ### Web Fonts
 
+- [Font performance resources](https://github.com/mandymichael/font-performance-resources)
 - [How to Download and Optimize Google Fonts](https://www.aleksandrhovhannisyan.com/blog/downloading-and-optimizing-google-fonts/#optimizing-and-subsetting-any-font-with-glyphhanger), Aleksandr Hovhannisyan, [02/2022]
 - [Fallback Font Generator](https://screenspan.net/fallback)
 - [30 Best Web Safe Fonts for Your Next Design in 2021](https://kinsta.com/blog/web-safe-fonts/), Maateo Duó, [07/2021]
@@ -938,6 +939,7 @@ The [Performance Timing Primer](https://w3c.github.io/perf-timing-primer/) gives
 
 ## Other (needs sorting)
 
+- <https://github.com/DebugBear/webperftours?tab=readme-ov-file>
 - <https://www.slideshare.net/nicjansma/measuring-the-performance-of-single-page-applications>
 - <https://www.slideshare.net/bluesmoon/beyond-page-level-metrics>
 - <https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf>
