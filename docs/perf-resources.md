@@ -848,6 +848,8 @@ Sitespeed.io is a set of Open Source tools that makes it easy to monitor and mea
 Codebase of the Google Chrome Lighthouse tool.
 - [Core Web Vitals Optimizer (BETA)](https://github.com/fabkrum/core-web-vitals-optimizer)
 The Core Web Vitals Optimizer is a tool based on Google Sheets which supports a proven workflow to achieve good CWV with any website.
+- [Obs.js: context-aware web performance for everyone](https://csswizardry.com/Obs.js/demo/)
+Obs.js reads a handful of browser signals (Navigator and Battery APIs) to infer connection strength, battery status, and device capability. It exposes those signals as CSS classes on the <html> element, and as properties on window.obs, so you can adapt delivery accordingly: serve lower-resolution media, forgo web fonts, disable auto-playing video… you name it.
 
 ## Studies
 

@@ -299,6 +299,8 @@ HAR Analyzer is a Node.js-based tool for performing simple analysis on HTTP Arch
 
 > These are professional tools which cost money. The cost are usually depends on traffic, server or data.
 
+- [Palette](https://palette.dev/)
+Palette collects end user interaction latency, page loads, and JavaScript code profiles, tying slow user experiences and regressions to lines of code. Monitor and fix performance issues in minutes, not months.
 - [New Relic](https://newrelic.com/)
 New Relic offers your great tools which give you insight in your whole app stack in real time. New Relic insights lets you also consume 3rd party APIs and correlate performance with business data. It also comes with great monitor solutions which alert you before things getting bad.
 - [Speedcurve](https://speedcurve.com/)
