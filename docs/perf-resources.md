@@ -359,6 +359,7 @@ Overview of performance related blogs
 
 ### Measure Performance
 
+- [A hands-on field guide to the two views that matter most: the network waterfall and the flame chart.](https://perf.reviews/profile-guide), Joan León, [08/2026]
 - [Experimenting with measuring soft navigations - Chrome Developers](https://developer.chrome.com/blog/soft-navigations-experiment/), Barry Pollard, Yoav Weiss, [02/2023]
 - [Variability Isn't the Problem](https://timkadlec.com/remembers/2022-12-08-variability-isnt-the-problem/), Tim Kadlec, [12/2022]
 - [How Fast Is Your Web App? How to Test Page Transition Performance](https://blog.webpagetest.org/posts/test-your-spa/), Scott Jehl, [09/2022]
